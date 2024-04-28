@@ -1,0 +1,49 @@
+.bg {
+  background-image: url("../../public/assets/header-bg.png");
+  height: 750px;
+  background-size: cover;
+  margin-top: -150px;
+}
+.gridProdutosContainer,
+.sobreContainer,
+.categoriasSectionContainer,
+.duvidasContainer,
+.socialContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+/* CATEGORIAS */
+.categoriasContainer {
+  display: flex;
+  flex-direction: row;
+}
+.Link {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+#categoria1 {
+  background-image: url("../../public/assets/categorias-img-1.png");
+  height: 750px;
+  background-size: cover;
+}
+#categoria2 {
+  background-image: url("../../public/assets/categorias-img-2.png");
+  height: 750px;
+  background-size: cover;
+}
+#categoria3 {
+  background-image: url("../../public/assets/categorias-img-3.png");
+  height: 750px;
+  background-size: cover;
+}
+#categoria4 {
+  background-image: url("../../public/assets/categorias-img-4.png");
+  height: 750px;
+  background-size: cover;
+}

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Menu from "@/componentes/Menu";
+import Menu from "@/componentes/menu/Menu";
+import FooterPage from "./footer/page";
 
 export const metadata: Metadata = {
   title: "Komode Móveis e Decorados",
@@ -17,6 +18,7 @@ export default function RootLayout({
       <body>
         <Menu />
         {children}
+        <FooterPage />
       </body>
     </html>
   );

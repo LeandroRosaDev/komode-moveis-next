@@ -1,0 +1,26 @@
+.navContainer {
+  /* position: fixed; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 4rem;
+}
+.menuSocialContainer {
+  display: flex;
+  justify-content: end;
+  gap: 1rem;
+  width: 100%;
+}
+
+.menu {
+  display: flex;
+  gap: 3rem;
+  text-transform: uppercase;
+  align-items: center;
+  padding: 5px;
+  border-top: 1px solid #ffffff3f;
+}
+.menu a {
+  color: white;
+}

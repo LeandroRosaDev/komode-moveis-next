@@ -1,0 +1,6 @@
+.bg {
+  background-image: url("../../../public/assets/sobre/pag-sobre-bg.jpg");
+  height: 650px;
+  background-size: cover;
+  margin-top: -150px;
+}
