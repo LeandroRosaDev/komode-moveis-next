@@ -4,3 +4,39 @@
   background-size: cover;
   margin-top: -150px;
 }
+.contatoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contato,
+.mensagem {
+  display: flex;
+  background-color: white;
+  max-width: 1440px;
+  padding: 40px;
+  gap: 2rem;
+}
+
+.contato div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+}
+
+.mensagem {
+  flex-direction: column;
+  text-align: center;
+  background-color: rgb(68, 68, 68);
+  align-items: center;
+  color: white;
+}
+
+.mensagem a {
+  width: 150px;
+  text-transform: uppercase;
+}

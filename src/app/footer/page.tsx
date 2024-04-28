@@ -6,16 +6,21 @@ export default async function FooterPage() {
     <footer>
       <section className={style.highFooter}>
         <div className={style.contato}>
-          <div>
-            <h1>Visite nosso show room</h1>
+          <div className={style.endereco}>
+            <h1>
+              Visite nosso <br /> show room
+            </h1>
             <p>Av. Dr Délio Guaraná nº000 São João de Meriti, RJ</p>
             <p>Seg - De: 08 as: 18 pm | Sáb: 08 am - 12 pm</p>
           </div>
-          <div>
-            <button>
-              <Link href="">Encontre-nos</Link>
-            </button>
-            <a href="">(21)2100 0000</a>
+          <div className={style.telefone}>
+            <Link className="buttonTransparent" href="">
+              Encontre-nos
+            </Link>
+
+            <a href="" style={{ color: "#a80e00", fontSize: "2rem" }}>
+              (21)2100 0000
+            </a>
           </div>
         </div>
         <div className={style.linksUteis}>
@@ -41,9 +46,15 @@ export default async function FooterPage() {
       </section>
       <section className={style.lowFooter}>
         <div>
-          <Image src="" alt="" />
-          <Image src="" alt="" />
-          <Image src="" alt="" />
+          <a href="">
+            <Image src="" alt="" />
+          </a>
+          <a href="">
+            <Image src="" alt="" />
+          </a>
+          <a href="">
+            <Image src="" alt="" />
+          </a>
         </div>
         <p>Todos os direitos reservados</p>
         <p>

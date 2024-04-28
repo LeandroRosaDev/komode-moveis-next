@@ -1,0 +1,46 @@
+.highFooter {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contato,
+.linksUteis {
+  display: flex;
+  gap: 2rem;
+  padding: 50px;
+}
+.endereco,
+.telefone {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.endereco p,
+.linksUteis div a {
+  color: #616161;
+}
+.endereco h1,
+.linksUteis div h1 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: #a80e00;
+}
+
+.linksUteis div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.lowFooter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 10px;
+  background-color: rgb(56, 56, 56);
+}

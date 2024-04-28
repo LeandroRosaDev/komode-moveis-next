@@ -14,20 +14,20 @@ export default function SobrePage() {
   return (
     <main>
       <div className={style.bg}></div>
-      <section>
-        <h1>O início de tudo</h1>
-        <h3>
+      <section className={style.sobreContainer}>
+        <h1 className="mainTitle">O início de tudo</h1>
+        <h3 className="secondTitle">
           Nossa historia sempre foi acompanhada de muita dedicação e esforço,
           trabalhamos duro e nos esforçamos desde o inicio para entregar
           produtos de excelente qualidade, sempre prezando pelo respeito mútuo
           entre nossos colaboradores.
         </h3>
         <div>
-          <div>
+          <div className={style.sobreContent}>
             <Image src={blog2} alt="" />
-            <Image src={card1} alt="" />
-            <h3>
-              <span>Como foi o nosso inicio </span>
+            <Image className={style.card} src={card1} alt="" />
+            <h3 className="secondTitle">
+              <span>Como foi o nosso inicio </span> <br />
               No início de nossa jornada, em 2019, a Komode Móveis e Decorados
               era apenas um sonho, uma pequena semente de esperança plantada em
               solo fértil. Em uma modesta loja, começamos a escrever nossa
