@@ -2,15 +2,18 @@
   background-color: black;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 
 .contato,
 .linksUteis {
   display: flex;
+  justify-content: space-around;
+  align-items: center;
   gap: 2rem;
   padding: 50px;
+  width: 100%;
 }
 .endereco,
 .telefone {
@@ -42,5 +45,10 @@
   align-items: center;
   gap: 1rem;
   padding: 10px;
-  background-color: rgb(56, 56, 56);
+  background-color: rgb(31, 31, 31);
+}
+.lowFooter img {
+  width: 30px;
+  height: 30px;
+  margin-right: 15px;
 }

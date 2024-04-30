@@ -8,12 +8,7 @@ import iconCategoria4 from "../../public/assets/categoria-icon-4.png";
 import duvida1 from "../../public/assets/duvidas-img-1.png";
 import duvida2 from "../../public/assets/duvidas-img-2.png";
 import duvida3 from "../../public/assets/duvidas-img-3.png";
-import social1 from "../../public/assets/social-img-1.png";
-import social2 from "../../public/assets/social-img-2.png";
-import social3 from "../../public/assets/social-img-3.png";
-import social4 from "../../public/assets/social-img-4.png";
-import social5 from "../../public/assets/social-img-5.png";
-import social6 from "../../public/assets/social-img-6.png";
+import social from "../../public/assets/social-img.png";
 
 import Link from "next/link";
 
@@ -39,36 +34,44 @@ export default function Home() {
         </h3>
         <div className={style.categoriasContainer}>
           <Link href="" className={style.Link} id={style.categoria1}>
-            <Image src={iconCategoria1} alt="Icone específico da categoria" />
+            <Image src={iconCategoria1} alt="Icone de uma sofá" />
             <p>Sala de Estar</p>
-            <h1>Os melhores móveis para a sua casa</h1>
-            <p>
-              Venha conferir os melhores móveis de escritório para a sua casa
-            </p>
+            <div>
+              <h1>Os melhores móveis para a sua casa</h1>
+              <p>
+                Venha conferir os melhores móveis de escritório para a sua casa
+              </p>
+            </div>
           </Link>
           <Link href="" className={style.Link} id={style.categoria2}>
-            <Image src={iconCategoria2} alt="Icone específico da categoria" />
+            <Image src={iconCategoria2} alt="Icone de uma cama" />
             <p>Quarto</p>
-            <h1>Os melhores móveis para a sua casa</h1>
-            <p>
-              Venha conferir os melhores móveis de escritório para a sua casa
-            </p>
+            <div>
+              <h1>Os melhores móveis para a sua casa</h1>
+              <p>
+                Venha conferir os melhores móveis de escritório para a sua casa
+              </p>
+            </div>
           </Link>
           <Link href="" className={style.Link} id={style.categoria3}>
-            <Image src={iconCategoria3} alt="Icone específico da categoria" />
+            <Image src={iconCategoria3} alt="Icone de um escrivaninha" />
             <p>Escritório</p>
-            <h1>Os melhores móveis para a sua casa</h1>
-            <p>
-              Venha conferir os melhores móveis de escritório para a sua casa
-            </p>
+            <div>
+              <h1>Os melhores móveis para a sua casa</h1>
+              <p>
+                Venha conferir os melhores móveis de escritório para a sua casa
+              </p>
+            </div>
           </Link>
           <Link href="" className={style.Link} id={style.categoria4}>
-            <Image src={iconCategoria4} alt="Icone específico da categoria" />
+            <Image src={iconCategoria4} alt="Icone de um banheiro" />
             <p>Banheiro</p>
-            <h1>Os melhores móveis para a sua casa</h1>
-            <p>
-              Venha conferir os melhores móveis de escritório para a sua casa
-            </p>
+            <div>
+              <h1>Os melhores móveis para a sua casa</h1>
+              <p>
+                Venha conferir os melhores móveis de escritório para a sua casa
+              </p>
+            </div>
           </Link>
         </div>
       </section>
@@ -94,17 +97,17 @@ export default function Home() {
         <h3 className="secondTitle">Tirem suas principais duvidas conosco</h3>
         <div className={style.duvidasContent}>
           <Link href="" className={style.LinksDuvidas}>
-            <Image src={duvida1} alt="" width={400} />
+            <Image src={duvida1} alt="Imagem de entregas" width={400} />
 
-            <h1>Como são feitas as entregas no site</h1>
+            <h1>Qual o tempo de entrega?</h1>
           </Link>
           <Link href="" className={style.LinksDuvidas}>
-            <Image src={duvida2} alt="" width={400} />
-            <h1>Como são feitas as entregas no site</h1>
+            <Image src={duvida2} alt="Imagem de um contrato" width={400} />
+            <h1>Qual o prazo de garantia?</h1>
           </Link>
           <Link href="" className={style.LinksDuvidas}>
-            <Image src={duvida3} alt="" width={400} />
-            <h1>Como são feitas as entregas no site</h1>
+            <Image src={duvida3} alt="Imagem de um cartão" width={400} />
+            <h1>O pagamento é na entrega?</h1>
           </Link>
         </div>
       </section>
@@ -112,12 +115,7 @@ export default function Home() {
         <h1 className="mainTitle">Sigam nos no instagram</h1>
         <h3 className="secondTitle">@komodemoveis</h3>
         <div className={style.socialImages}>
-          <Image src={social1} alt="" className={style.socialImg} />
-          <Image src={social2} alt="" className={style.socialImg} />
-          <Image src={social3} alt="" className={style.socialImg} />
-          <Image src={social4} alt="" className={style.socialImg} />
-          <Image src={social5} alt="" className={style.socialImg} />
-          <Image src={social6} alt="" className={style.socialImg} />
+          <Image src={social} alt="Imagens de cômodos" />
         </div>
       </section>
     </main>

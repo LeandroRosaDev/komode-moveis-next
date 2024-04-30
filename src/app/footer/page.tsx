@@ -1,9 +1,12 @@
 import Link from "next/link";
 import style from "./footerPage.module.css";
 import Image from "next/image";
+import socialIcon1 from "../../../public/assets/footer-social-1.png";
+import socialIcon2 from "../../../public/assets/footer-social-2.png";
+import socialIcon3 from "../../../public/assets/footer-social-3.png";
 export default async function FooterPage() {
   return (
-    <footer>
+    <footer className="container">
       <section className={style.highFooter}>
         <div className={style.contato}>
           <div className={style.endereco}>
@@ -26,34 +29,34 @@ export default async function FooterPage() {
         <div className={style.linksUteis}>
           <div>
             <h1>Encontre Aqui</h1>
-            <Link href="">Inicio</Link>
-            <Link href="">Produtos</Link>
-            <Link href="">Categorias</Link>
+            <Link href="/">Inicio</Link>
+            <Link href="/produto">Produtos</Link>
+            <Link href="/categorias">Categorias</Link>
           </div>
           <div>
-            <h1>Encontre Aqui</h1>
-            <Link href="">Inicio</Link>
-            <Link href="">Produtos</Link>
-            <Link href="">Categorias</Link>
+            <h1>Links Diretos</h1>
+            <Link href="/sobre">Sobre</Link>
+            <Link href="/contato">Contato</Link>
+            <Link href="/duvidas">Dúvidas</Link>
           </div>
           <div>
-            <h1>Encontre Aqui</h1>
-            <Link href="">Inicio</Link>
-            <Link href="">Produtos</Link>
-            <Link href="">Categorias</Link>
+            <h1>Política da loja</h1>
+            <Link href="/trocas">Trocas</Link>
+            <Link href="/garantia">Garantia</Link>
+            <Link href="/reclamacoes">Reclame Aqui</Link>
           </div>
         </div>
       </section>
       <section className={style.lowFooter}>
         <div>
           <a href="">
-            <Image src="" alt="" />
+            <Image src={socialIcon1} alt="Ícone do facebook" />
           </a>
           <a href="">
-            <Image src="" alt="" />
+            <Image src={socialIcon2} alt="Ícone do Instagram" />
           </a>
           <a href="">
-            <Image src="" alt="" />
+            <Image src={socialIcon3} alt="Ícone do whatsapp" />
           </a>
         </div>
         <p>Todos os direitos reservados</p>

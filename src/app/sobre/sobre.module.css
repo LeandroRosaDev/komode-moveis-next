@@ -1,8 +1,25 @@
 .bg {
   background-image: url("../../../public/assets/sobre/pag-sobre-bg.jpg");
-  height: 650px;
+  height: 450px;
+  width: 100%;
   background-size: cover;
+  background-position: center;
+
   margin-top: -150px;
+
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.bg h1 {
+  text-align: center;
+  margin-top: 200px;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-weight: 300;
 }
 .sobreContainer {
   margin: 0 4rem;
@@ -11,11 +28,13 @@
   justify-content: center;
   align-items: center;
 }
+
 .sobreContent {
   background-color: white;
   display: flex;
   align-items: center;
   max-width: 1340px;
+  margin: 50px 0;
 }
 .sobreContent h3 {
   margin: 1rem;
@@ -27,4 +46,20 @@
 }
 .card {
   margin-left: -80px;
+}
+
+.parallax {
+  height: 500px; /* Altura fixa para o efeito */
+  background-image: url("../../../public/assets/sobre/paralax-img.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 100px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 4rem;
+  color: white;
 }
