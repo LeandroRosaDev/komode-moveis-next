@@ -10,7 +10,7 @@ import duvida2 from "../../public/assets/duvidas-img-2.png";
 import duvida3 from "../../public/assets/duvidas-img-3.png";
 import social from "../../public/assets/social-img.png";
 import Link from "next/link";
-import Slide from "@/componentes/slideHome/Slide";
+// import Slide from "@/componentes/slideHome/Slide";
 
 export default function Home() {
   return (
