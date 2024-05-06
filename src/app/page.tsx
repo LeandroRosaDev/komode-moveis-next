@@ -9,15 +9,16 @@ import duvida1 from "../../public/assets/duvidas-img-1.png";
 import duvida2 from "../../public/assets/duvidas-img-2.png";
 import duvida3 from "../../public/assets/duvidas-img-3.png";
 import social from "../../public/assets/social-img.png";
-
 import Link from "next/link";
+import Slide from "@/componentes/slideHome/Slide";
 
 export default function Home() {
   return (
-    <main>
+    <main style={{ width: "100%" }}>
       {/* <h1>
         Olá Mariazinha, bem vinda ao Inicio do seu Sonho papai ta lutando muito!
       </h1> */}
+      {/* <Slide /> */}
       <div className={style.bg}></div>
       <section className={style.gridProdutosContainer}>
         <h1 className="mainTitle">Produtos Populares</h1>

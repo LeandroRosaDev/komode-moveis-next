@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Menu from "@/componentes/menu/Menu";
 import FooterPage from "./footer/page";
+import ScrollToTopButton from "@/componentes/scrolltotop/ScrollToTopButton";
+import WhatsappButton from "@/componentes/whatsapp/WhatsappButton";
 
 export const metadata: Metadata = {
   title: "Komode Móveis e Decorados",
@@ -19,6 +21,8 @@ export default function RootLayout({
         <Menu />
         {children}
         <FooterPage />
+        <WhatsappButton />
+        <ScrollToTopButton />
       </body>
     </html>
   );
