@@ -1,0 +1,40 @@
+.bg {
+  background-image: url("../../../public/assets/produtos/produtos-bg.jpg");
+  height: 500px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+
+  margin-top: -150px;
+
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.bg h1 {
+  text-align: center;
+  margin-top: 200px;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+.gridCategorias {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: white;
+}
+.gridCategorias a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.gridCategorias a:hover {
+  transform: scale(106%);
+  transition: 0.4s;
+}

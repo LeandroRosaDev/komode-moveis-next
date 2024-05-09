@@ -1,0 +1,53 @@
+.duvidasContainer {
+  width: 100%;
+}
+.bg {
+  background-image: url("../../../public/assets/duvidas/duvidas-bg.png");
+  height: 500px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+
+  margin-top: -150px;
+
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.bg h1 {
+  text-align: center;
+  margin-top: 200px;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+.gridDuvidasContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4rem;
+  margin: 6rem;
+}
+.duvidasContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.duvidasContent img {
+  max-width: 600px;
+  max-height: 400px;
+}
+.duvidasContent h3 {
+  max-width: 600px;
+}
+#imgNone {
+  display: none;
+}
+.duvidasContent span {
+  font-size: 3rem;
+}

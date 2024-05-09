@@ -1,3 +1,17 @@
+.gridProdutosContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.gridProdutosContent {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
 .button {
   background-color: #c91b0b;
   color: white;

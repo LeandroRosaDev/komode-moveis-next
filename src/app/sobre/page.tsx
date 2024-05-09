@@ -7,7 +7,6 @@ import blog2 from "@/../public/assets/sobre/blog-2.jpg";
 import blog3 from "@/../public/assets/sobre/blog-3.jpg";
 import blog4 from "@/../public/assets/sobre/blog-4.jpg";
 import blog5 from "@/../public/assets/sobre/blog-5.jpg";
-import blog7 from "@/../public/assets/sobre/blog-7.jpg";
 import style from "./sobre.module.css";
 
 export default function SobrePage() {

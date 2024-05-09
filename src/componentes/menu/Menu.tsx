@@ -32,7 +32,7 @@ export default async function Menu() {
           <Link href="/">Início</Link>
         </li>
         <li>
-          <Link href="/produto">Produto</Link>
+          <Link href="/produtos">Produtos</Link>
         </li>
         <li>
           <Link href="/sobre"> Sobre Nós </Link>

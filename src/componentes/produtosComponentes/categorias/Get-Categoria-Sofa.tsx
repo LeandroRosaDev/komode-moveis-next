@@ -1,17 +1,17 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { Produto } from "@/interfaces/Produtos-types";
-import { getProductsDestaqueAction } from "@/actions/produtos/get-produtos-destaque-action";
+import { getSofaAction } from "@/actions/produtos/categorias/get-sofa-action";
 import Image from "next/image";
 import style from "./GetProdutosDestaque.module.css";
 import Link from "next/link";
 
-export default function GetProdutosDestaque() {
+export default function GetCategoriaSofa() {
   const [produtos, setProdutos] = useState<Produto[]>([]);
 
   useEffect(() => {
     async function loadProducts() {
-      const { data } = await getProductsDestaqueAction();
+      const { data } = await getSofaAction();
       setProdutos(data);
     }
     loadProducts();
@@ -35,7 +35,7 @@ export default function GetProdutosDestaque() {
               {produto.cor}
             </h1>
             <h3>R$ {produto.preco}</h3>
-            <Link href={`/produtos/${produto.id}`}>Ver detalhes</Link>
+            <Link href={`/produto/${produto.id}`}>Ver detalhes</Link>
           </div>
         ))}
       </div>

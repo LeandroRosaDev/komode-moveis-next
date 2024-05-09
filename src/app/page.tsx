@@ -97,16 +97,16 @@ export default function Home() {
         <h1 className="mainTitle">Duvidas</h1>
         <h3 className="secondTitle">Tirem suas principais duvidas conosco</h3>
         <div className={style.duvidasContent}>
-          <Link href="" className={style.LinksDuvidas}>
+          <Link href="/duvidas" className={style.LinksDuvidas}>
             <Image src={duvida1} alt="Imagem de entregas" width={400} />
 
             <h1>Qual o tempo de entrega?</h1>
           </Link>
-          <Link href="" className={style.LinksDuvidas}>
+          <Link href="/duvidas" className={style.LinksDuvidas}>
             <Image src={duvida2} alt="Imagem de um contrato" width={400} />
             <h1>Qual o prazo de garantia?</h1>
           </Link>
-          <Link href="" className={style.LinksDuvidas}>
+          <Link href="/duvidas" className={style.LinksDuvidas}>
             <Image src={duvida3} alt="Imagem de um cartão" width={400} />
             <h1>O pagamento é na entrega?</h1>
           </Link>
