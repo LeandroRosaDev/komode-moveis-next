@@ -1,17 +1,17 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { Produto } from "@/interfaces/Produtos-types";
-import { getSofaAction } from "@/actions/produtos/categorias/get-sofa-action";
+import { getMesaDeJantarAction } from "@/actions/produtos/categorias/sala/get-mesa-de-jantar-action";
 import Image from "next/image";
-import style from "./GetProdutosDestaque.module.css";
+import style from "../GetProdutosDestaque.module.css";
 import Link from "next/link";
 
-export default function GetCategoriaCama() {
+export default function GetCategoriaMesa() {
   const [produtos, setProdutos] = useState<Produto[]>([]);
 
   useEffect(() => {
     async function loadProducts() {
-      const { data } = await getSofaAction();
+      const { data } = await getMesaDeJantarAction();
       setProdutos(data);
     }
     loadProducts();

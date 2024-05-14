@@ -17,7 +17,7 @@ export default function ProdutosPage() {
         <p>Confira abaixo todos os produtos disponíveis em nosso estoque</p>
       </div>
       <div className={style.gridCategorias}>
-        <Link href="categorias/sofa/">
+        <Link href="categorias/Sala de estar">
           <Image src={icon1} alt="Icone de um sofá" width={150} />
           <p>Sofás</p>
         </Link>

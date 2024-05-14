@@ -21,7 +21,7 @@
   text-transform: uppercase;
   align-items: center;
   padding: 5px;
-  justify-content: end;
+  justify-content: flex-end;
   width: 80%;
   border-top: 1px solid #ffffff3f;
 }

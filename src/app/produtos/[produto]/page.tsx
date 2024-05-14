@@ -2,13 +2,13 @@ import { PageParams } from "@/interfaces/Produtos-types";
 import Image from "next/image";
 
 export default async function produtoPage({ params }: PageParams) {
+  const token = process.env.ACCESS_TOKEN;
   const response = await fetch(
     `https://apikomode.altuori.com/wp-json/api/produto/${params.produto}`,
     {
       cache: "no-store",
       headers: {
-        Authorization:
-          "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaWtvbW9kZS5hbHR1b3JpLmNvbSIsImlhdCI6MTcxNTI5MTQwOSwibmJmIjoxNzE1MjkxNDA5LCJleHAiOjE3MTUzNzc4MDksImRhdGEiOnsidXNlciI6eyJpZCI6IjIifX19.t1HbLyICmPQISK03WALV5KvXPZKfR8-yd6KmrSkEr0Q",
+        Authorization: `Bearer ${token}`,
       },
     }
   );
@@ -19,6 +19,7 @@ export default async function produtoPage({ params }: PageParams) {
       <h1>Produto</h1>
       <p>{data.produto_cod}</p>
       <p>{data.cor}</p>
+      <p>{data.estrutura}</p>
       {/* Exibindo a primeira imagem separadamente */}
       {data.fotos.length > 0 && (
         <div>

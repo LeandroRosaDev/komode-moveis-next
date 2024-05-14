@@ -34,7 +34,11 @@ export default function Home() {
           precisa para o seu lar
         </h3>
         <div className={style.categoriasContainer}>
-          <Link href="" className={style.Link} id={style.categoria1}>
+          <Link
+            href="/categorias/sala de estar"
+            className={style.Link}
+            id={style.categoria1}
+          >
             <Image src={iconCategoria1} alt="Icone de uma sofá" />
             <p>Sala de Estar</p>
             <div>
@@ -44,7 +48,11 @@ export default function Home() {
               </p>
             </div>
           </Link>
-          <Link href="" className={style.Link} id={style.categoria2}>
+          <Link
+            href="/categorias/quarto de solteiro"
+            className={style.Link}
+            id={style.categoria2}
+          >
             <Image src={iconCategoria2} alt="Icone de uma cama" />
             <p>Quarto</p>
             <div>
