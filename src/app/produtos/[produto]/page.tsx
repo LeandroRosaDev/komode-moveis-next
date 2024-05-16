@@ -1,5 +1,6 @@
 import { PageParams } from "@/interfaces/Produtos-types";
 import Image from "next/image";
+import style from "./produtos.module.css";
 
 export default async function produtoPage({ params }: PageParams) {
   const token = process.env.ACCESS_TOKEN;
@@ -16,14 +17,18 @@ export default async function produtoPage({ params }: PageParams) {
 
   return (
     <section>
-      <h1>Produto</h1>
-      <p>{data.produto_cod}</p>
-      <p>{data.cor}</p>
-      <p>{data.estrutura}</p>
+      <div className={style.informacoes}>
+        <h1>Produto</h1>
+        <a target="blank" href={data.link_1}>
+          Clique aqui e saiba mais
+        </a>
+        <p>{data.nome_long}</p>
+        <p>{data.cor}</p>
+        <p>{data.estrutura}</p>
+      </div>
       {/* Exibindo a primeira imagem separadamente */}
       {data.fotos.length > 0 && (
         <div>
-          <h2>Primeira Imagem:</h2>
           <Image
             src={data.fotos[0].src}
             alt={data.fotos[0].titulo}
@@ -44,9 +49,6 @@ export default async function produtoPage({ params }: PageParams) {
             height={100}
           />
         ))}
-        <a target="blank" href={data.link_1}>
-          Clique aqui e saiba mais
-        </a>
       </div>
     </section>
   );

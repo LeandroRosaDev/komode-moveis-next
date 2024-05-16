@@ -18,24 +18,34 @@ export default function GetProdutosDestaque() {
   }, []);
 
   return (
-    <section>
+    <section className="gridMain">
       <div className={style.gridProdutosContainer}>
         {produtos.map((produto) => (
           <div className={style.gridProdutosContent} key={produto.id}>
             {produto.fotos && produto.fotos.length > 0 && (
-              <Image
-                src={produto.fotos[1].src}
-                alt={`Imagem de ${produto.nome}`}
-                width={400}
-                height={300}
-              />
+              <Link href={`/produtos/${produto.id}`}>
+                <Image
+                  src={produto.fotos[1].src}
+                  alt={`Imagem de ${produto.nome}`}
+                  width={300}
+                  height={200}
+                  className={style.image}
+                />
+              </Link>
             )}
-            <h1>
-              {produto.produto_cod} {""}
-              {produto.cor}
-            </h1>
-            <h3>R$ {produto.preco}</h3>
-            <Link href={`/produtos/${produto.id}`}>Ver detalhes</Link>
+            <div className={style.middle}>
+              <Link className={style.text} href={`/produtos/${produto.id}`}>
+                Ver detalhes
+              </Link>
+            </div>
+            <div className={style.infoContent}>
+              <h1>{produto.nome}</h1>
+              <h5>De R$ 1599,00</h5>
+              <h3>
+                Por R$ {produto.preco} <span>no Pix</span>
+              </h3>
+              <h6>Ou em até 12x de R$ 363,00</h6>
+            </div>
           </div>
         ))}
       </div>

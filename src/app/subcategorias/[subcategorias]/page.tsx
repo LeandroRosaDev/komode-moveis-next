@@ -4,14 +4,15 @@ import { PageParams, Produto } from "@/interfaces/Produtos-types";
 import Link from "next/link";
 import Image from "next/image";
 
-const CategoriasPage = ({ params }: PageParams) => {
+const SubCategoriasPage = ({ params }: PageParams) => {
   const [produtos, setProdutos] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchProdutos = async () => {
-      const url = `https://apikomode.altuori.com/wp-json/api/produto?categoria=${params.categorias}`;
+      const url = `https://apikomode.altuori.com/wp-json/api/produto?sub_categoria=${params.subcategorias}`;
+      console.log(params.subcategorias);
 
       try {
         const response = await fetch(url, {
@@ -27,7 +28,7 @@ const CategoriasPage = ({ params }: PageParams) => {
         }
 
         const data: any = await response.json();
-        console.log("Dados recebidos:", data); // Logging para verificar os dados
+        console.log("Dados recebidos:", data);
         if (!data || data.length === 0) {
           throw new Error("Nenhum produto encontrado");
         }
@@ -69,4 +70,4 @@ const CategoriasPage = ({ params }: PageParams) => {
   );
 };
 
-export default CategoriasPage;
+export default SubCategoriasPage;

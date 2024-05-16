@@ -45,3 +45,10 @@ a {
 .container {
   width: 100%;
 }
+
+.gridMain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

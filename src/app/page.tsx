@@ -62,7 +62,11 @@ export default function Home() {
               </p>
             </div>
           </Link>
-          <Link href="" className={style.Link} id={style.categoria3}>
+          <Link
+            href="/categorias/escritorio"
+            className={style.Link}
+            id={style.categoria3}
+          >
             <Image src={iconCategoria3} alt="Icone de um escrivaninha" />
             <p>Escritório</p>
             <div>
@@ -72,7 +76,11 @@ export default function Home() {
               </p>
             </div>
           </Link>
-          <Link href="" className={style.Link} id={style.categoria4}>
+          <Link
+            href="/categorias/banheiro"
+            className={style.Link}
+            id={style.categoria4}
+          >
             <Image src={iconCategoria4} alt="Icone de um banheiro" />
             <p>Banheiro</p>
             <div>

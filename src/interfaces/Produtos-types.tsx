@@ -38,11 +38,13 @@ export type Produto = {
   usuario_id?: string;
   fotos?: any;
   img?: File[];
+  length: number;
 };
 
 export type PageParams = {
   params: {
     produto: string;
     categorias: string;
+    subcategorias: string;
   };
 };
