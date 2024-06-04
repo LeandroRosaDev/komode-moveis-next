@@ -1,8 +1,9 @@
 "use client";
 import { useEffect, useState } from "react";
-import { PageParams, Produto } from "@/interfaces/Produtos-types";
+import { PageParams } from "@/interfaces/Produtos-types";
 import Link from "next/link";
 import Image from "next/image";
+import style from "@/componentes/produtosComponentes/GetProdutosDestaque.module.css";
 
 const CategoriasPage = ({ params }: PageParams) => {
   const [produtos, setProdutos] = useState([]);
@@ -11,7 +12,7 @@ const CategoriasPage = ({ params }: PageParams) => {
 
   useEffect(() => {
     const fetchProdutos = async () => {
-      const url = `https://apikomode.altuori.com/wp-json/api/produto?categoria=${params.categorias}`;
+      const url = `https://apikomode.altuori.com/wp-json/api/produto?categoria=${params.categorias}&_limit=8`;
 
       try {
         const response = await fetch(url, {
@@ -49,19 +50,33 @@ const CategoriasPage = ({ params }: PageParams) => {
 
   return (
     <section>
-      <div>
+      <div className={style.gridProdutosContainer}>
         {produtos.map((produto: any) => (
-          <div key={produto.id}>
-            <h1>{produto.nome} </h1>
+          <div className={style.gridProdutosContent} key={produto.id}>
             {produto.fotos && produto.fotos.length > 0 && (
-              <Image
-                src={produto.fotos[1].src}
-                alt={`Imagem de ${produto.nome}`}
-                width={400}
-                height={300}
-              />
+              <Link href={`/produtos/${produto.id}`}>
+                <Image
+                  className={style.image}
+                  src={produto.fotos[1].src}
+                  alt={`Imagem de ${produto.nome}`}
+                  width={300}
+                  height={100}
+                />
+              </Link>
             )}
-            <Link href={`/produtos/${produto.id}`}>Ver detalhes</Link>
+            <div className={style.middle}>
+              <Link className={style.text} href={`/produtos/${produto.id}`}>
+                Ver detalhes
+              </Link>
+            </div>
+            <div className={style.infoContent}>
+              <h1>{produto.nome}</h1>
+              <h5>De R$ 1599,00</h5>
+              <h3>
+                Por R$ {produto.preco} <span>no Pix</span>
+              </h3>
+              <h6>Ou em até 12x de R$ 363,00</h6>
+            </div>
           </div>
         ))}
       </div>
