@@ -15,11 +15,12 @@ a {
   color: black;
 }
 .mainTitle {
-  font-size: 2rem;
+  font-size: 1.8rem;
   text-align: center;
   text-transform: uppercase;
   margin-top: 2rem;
   margin-bottom: 1rem;
+  color: #3a3d45;
 }
 .secondTitle {
   font-size: 1.2rem;

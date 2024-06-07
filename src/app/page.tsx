@@ -97,7 +97,10 @@ export default function Home() {
           <h1 className="mainTitle" style={{ color: "white" }}>
             Nossa História
           </h1>
-          <p className="secondTitle" style={{ color: "white" }}>
+          <p
+            className="secondTitle"
+            style={{ color: "white", maxWidth: "700px" }}
+          >
             Nossa história se inicia em 2019, quando decidimos abrir nossa
             primeira loja. Localizada em São João de Meriti nossa loja hoje em
             outro endereço nos trouxe a sabedoria e a experiençia de como lidar
@@ -129,8 +132,12 @@ export default function Home() {
         </div>
       </section>
       <section className={style.socialContainer}>
-        <h1 className="mainTitle">Sigam nos no instagram</h1>
-        <h3 className="secondTitle">@komodemoveis</h3>
+        <h1 className="mainTitle">Sigam-nos no instagram</h1>
+        <h3 className="secondTitle">
+          <a target="blank" href="https://www.instagram.com/komodemd/">
+            @komodemd
+          </a>
+        </h3>
         <div className={style.socialImages}>
           <Image src={social} alt="Imagens de cômodos" />
         </div>

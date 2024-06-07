@@ -10,9 +10,7 @@ export default async function FooterPage() {
       <section className={style.highFooter}>
         <div className={style.contato}>
           <div className={style.endereco}>
-            <h1>
-              Visite nosso <br /> show room
-            </h1>
+            <h1>Visite nosso show room</h1>
             <p>Av. Dr Délio Guaraná nº000 São João de Meriti, RJ</p>
             <p>Seg - De: 08 as: 18 pm | Sáb: 08 am - 12 pm</p>
           </div>
@@ -20,7 +18,6 @@ export default async function FooterPage() {
             <Link className="buttonTransparent" href="">
               Encontre-nos
             </Link>
-
             <a href="" style={{ color: "#a80e00", fontSize: "2rem" }}>
               (21)2100 0000
             </a>
@@ -49,19 +46,26 @@ export default async function FooterPage() {
       </section>
       <section className={style.lowFooter}>
         <div>
-          <a href="">
+          <a target="blank" href="https://www.facebook.com/KomodeMoveis/">
             <Image src={socialIcon1} alt="Ícone do facebook" />
           </a>
-          <a href="">
+          <a target="blank" href="https://www.instagram.com/komodemd/">
             <Image src={socialIcon2} alt="Ícone do Instagram" />
           </a>
-          <a href="">
+          <a
+            target="blank"
+            href="//api.whatsapp.com/send?phone=5521978991540&text=Olá tudo bem? Gostaria de saber mais sobre as promoções disponíveis para mim! Eu vim através do site de vocês!!
+"
+          >
             <Image src={socialIcon3} alt="Ícone do whatsapp" />
           </a>
         </div>
         <p>Todos os direitos reservados</p>
         <p>
-          Esta é uma empresa do <a href="">Grupo Altuori</a>
+          Esta é uma empresa do{" "}
+          <a target="blank" href="https://altuori.com/">
+            Grupo Altuori
+          </a>
         </p>
       </section>
     </footer>

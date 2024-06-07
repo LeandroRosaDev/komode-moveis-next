@@ -45,8 +45,7 @@ export default async function Menu() {
               </li>
               <li>
                 <Link href="categorias/Quarto de Solteiro">
-                  {" "}
-                  Quarto de Solteiro{" "}
+                  Quarto de Solteiro
                 </Link>
               </li>
               <li>
