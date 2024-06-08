@@ -1,12 +1,12 @@
-import Link from "next/link";
-import style from "./footerPage.module.css";
-import Image from "next/image";
-import socialIcon1 from "../../../public/assets/footer-social-1.png";
-import socialIcon2 from "../../../public/assets/footer-social-2.png";
-import socialIcon3 from "../../../public/assets/footer-social-3.png";
+import Link from 'next/link';
+import style from './footerPage.module.css';
+import Image from 'next/image';
+import socialIcon1 from '../../../public/assets/footer-social-1.png';
+import socialIcon2 from '../../../public/assets/footer-social-2.png';
+import socialIcon3 from '../../../public/assets/footer-social-3.png';
 export default async function FooterPage() {
   return (
-    <footer className="container">
+    <footer className={style.containerFooter}>
       <section className={style.highFooter}>
         <div className={style.contato}>
           <div className={style.endereco}>
@@ -16,13 +16,35 @@ export default async function FooterPage() {
           </div>
           <div className={style.telefone}>
             <Link className="buttonTransparent" href="">
+              <Image
+                src="/assets/icon/location.svg"
+                width={20}
+                height={20}
+                alt="local"
+              />
               Encontre-nos
             </Link>
-            <a href="" style={{ color: "#a80e00", fontSize: "2rem" }}>
-              (21)2100 0000
-            </a>
+            <div style={{ display: 'flex', gap: '2px' }}>
+              <Image
+                src="/assets/icon/Phone.svg"
+                width={30}
+                height={30}
+                alt="local"
+              />
+              <a
+                href=""
+                style={{
+                  color: '#a80e00',
+                  fontSize: '1.5rem',
+                  fontWeight: '700',
+                }}
+              >
+                (21)2100 0000
+              </a>
+            </div>
           </div>
         </div>
+        <hr className={style.linha} />
         <div className={style.linksUteis}>
           <div>
             <h1>Encontre Aqui</h1>
@@ -60,13 +82,19 @@ export default async function FooterPage() {
             <Image src={socialIcon3} alt="Ícone do whatsapp" />
           </a>
         </div>
-        <p>Todos os direitos reservados</p>
-        <p>
-          Esta é uma empresa do{" "}
-          <a target="blank" href="https://altuori.com/">
-            Grupo Altuori
-          </a>
-        </p>
+        <div style={{ display: 'flex', gap: '7px' }}>
+          <p>Todos os direitos reservados.</p>
+          <p>
+            Esta é uma empresa do{' '}
+            <a
+              style={{ fontWeight: 'bold' }}
+              target="blank"
+              href="https://altuori.com/"
+            >
+              Grupo Altuori
+            </a>
+          </p>
+        </div>
       </section>
     </footer>
   );
