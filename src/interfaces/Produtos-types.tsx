@@ -19,6 +19,8 @@ export type Produto = {
   nome: string;
   nome_long: string;
   preco: string;
+  preco_original: string;
+  preco_parcelado: string;
   cor: string;
   categoria?: string;
   produto_cod?: string;

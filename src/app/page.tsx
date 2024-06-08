@@ -111,7 +111,7 @@ export default function Home() {
           </Link>
         </div>
       </section>
-      <section className={style.duvidasContainer}>
+      {/* <section className={style.duvidasContainer}>
         <h1 className="mainTitle">Duvidas</h1>
         <h3 className="secondTitle">Tirem suas principais duvidas conosco</h3>
         <div className={style.duvidasContent}>
@@ -127,6 +127,27 @@ export default function Home() {
           <Link href="/duvidas" className={style.LinksDuvidas}>
             <Image src={duvida3} alt="Imagem de um cartão" width={400} />
             <h1>O pagamento é na entrega?</h1>
+          </Link>
+        </div>
+      </section> */}
+      <section className={style.duvidasContainer}>
+        <h1 className="mainTitle">Duvidas</h1>
+        <h3 className="secondTitle">Tirem suas principais duvidas conosco</h3>
+        <div className={style.duvidasContent}>
+          <Link href="/duvidas" className={style.LinksDuvidas}>
+            <Image src={duvida1} alt="Imagem de entregas" width={400} />
+            <h1>Qual o tempo de entrega?</h1>
+            <button className={style.verMais}>Veja Mais</button>
+          </Link>
+          <Link href="/duvidas" className={style.LinksDuvidas}>
+            <Image src={duvida2} alt="Imagem de um contrato" width={400} />
+            <h1>Qual o prazo de garantia?</h1>
+            <button className={style.verMais}>Veja Mais</button>
+          </Link>
+          <Link href="/duvidas" className={style.LinksDuvidas}>
+            <Image src={duvida3} alt="Imagem de um cartão" width={400} />
+            <h1>O pagamento é na entrega?</h1>
+            <button className={style.verMais}>Veja Mais</button>
           </Link>
         </div>
       </section>

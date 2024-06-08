@@ -49,7 +49,7 @@
 }
 
 .parallax {
-  height: 500px; /* Altura fixa para o efeito */
+  height: 500px;
   background-image: url("../../../public/assets/sobre/paralax-img.jpg");
   background-attachment: fixed;
   background-position: center;

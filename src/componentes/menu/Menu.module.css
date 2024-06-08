@@ -31,40 +31,42 @@
   gap: 2rem;
   flex-wrap: wrap;
 }
-.desktopMenu li {
-  padding: 5px;
+.desktopMenu a {
+  display: inline-block;
+  position: relative;
 }
+
+.desktopMenu a:after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0px;
+  background: #c91b0b;
+  margin-top: 4px;
+  transition: 0.3s;
+  position: absolute;
+}
+
+.desktopMenu a:hover:after {
+  width: 100%;
+}
+
 .menu a,
 .menu {
   color: white;
 }
 
-.secondMenu,
-.tirthMenu {
+.secondMenu {
   background-color: #c91b0b;
   padding: 1rem;
-  display: flex;
+  display: none;
   flex-direction: column;
   position: absolute;
   gap: 1rem;
   min-width: 200px;
-  max-height: 0;
-  opacity: 0;
   border-radius: 4px;
-  transition: max-height 0.5s ease, opacity 0.5s ease;
-}
-
-.tirthMenu {
-  margin-left: 195px;
-  width: 200px;
 }
 
 .subMenu:hover .secondMenu {
-  max-height: 500px; /* Ajuste conforme necessário */
-  opacity: 1;
-}
-
-.secondMenu:hover .tirthMenu {
-  max-height: 500px; /* Ajuste conforme necessário */
-  opacity: 1;
+  display: flex;
 }

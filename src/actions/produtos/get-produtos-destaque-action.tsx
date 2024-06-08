@@ -1,9 +1,9 @@
 "use server";
+import { token } from "@/app/api/api";
 
 export async function getProductsDestaqueAction() {
-  const token = process.env.ACCESS_TOKEN;
   const response = await fetch(
-    "https://apikomode.altuori.com/wp-json/api/produto?_limit=8&situacao=destaque",
+    "https://apikomode.altuori.com/wp-json/api/produto?_limit=8",
     {
       cache: "no-store",
       headers: { Authorization: `Bearer ${token}` },

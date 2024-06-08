@@ -1,0 +1,125 @@
+.produtoPage {
+  font-family: Arial, sans-serif;
+}
+
+.voltar {
+  display: block;
+  margin-bottom: 20px;
+  color: blue;
+  text-decoration: underline;
+}
+
+.produtoContainer {
+  display: flex;
+  gap: 20px;
+}
+
+.produtoImages {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.thumbnailContainer {
+  display: flex;
+  gap: 10px;
+}
+
+.thumbnail {
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.mainImage {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.produtoInfo {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.preco {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.precoOriginal {
+  text-decoration: line-through;
+  color: red;
+}
+
+.precoDesconto {
+  font-size: 1.5em;
+  color: green;
+}
+
+.precoParcelado {
+  font-size: 1em;
+  color: gray;
+}
+
+.cores {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cor {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #000;
+  border-radius: 50%;
+}
+
+.whatsappButton {
+  display: inline-block;
+  padding: 1rem 1.4rem;
+  background-color: rgb(120, 189, 120);
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  text-decoration: none;
+  max-width: 10rem;
+}
+
+.descricaoContainer {
+  margin-top: 20px;
+}
+
+.descricaoMenu {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  gap: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.descricaoMenu li {
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.descricao {
+  margin-top: 10px;
+  max-width: 600px;
+}
+.descricao h3 {
+  margin-top: 2rem;
+}
+
+.imagensContainer {
+  margin-top: 20px;
+}
+
+.imagens {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}

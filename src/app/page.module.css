@@ -84,8 +84,13 @@
 /* SOBRE */
 .sobreContainer {
   background-image: url("../../public/assets/sobre-bg.png");
-  background-size: cover;
   height: 500px;
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 100px;
 }
 
 .sobreContent {
@@ -100,7 +105,7 @@
 
 /* DUVIDAS */
 
-.duvidasContent {
+/* .duvidasContent {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -119,6 +124,58 @@
   font-size: 1.4rem;
   padding: 10px;
   text-align: center;
+} */
+.duvidasContent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 3rem 0;
+}
+
+.LinksDuvidas {
+  position: relative;
+  background-color: white;
+  overflow: hidden;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 330px;
+  border-radius: 2rem;
+}
+
+.LinksDuvidas:hover {
+  height: 350px;
+  margin-top: -20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: 0.4s;
+}
+
+.LinksDuvidas h1 {
+  font-size: 1.4rem;
+  padding: 10px;
+}
+
+.verMais {
+  position: absolute;
+  bottom: -70px;
+  width: 50%;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: bottom 0.5s ease;
+  text-transform: uppercase;
+}
+
+.LinksDuvidas:hover .verMais {
+  transition: 0.6s;
+  bottom: 0;
 }
 
 /* SOCIAL IMAGES */

@@ -28,7 +28,13 @@ export default async function Menu() {
       </ul>
       <div className={style.menu}>
         <Link href="/">
-          <Image src={logotipo} alt="logotipo" width={150} height={50} />
+          <Image
+            src={logotipo}
+            alt="logotipo"
+            width={100}
+            height={100}
+            style={{ borderRadius: "100%" }}
+          />
         </Link>
         <ul className={style.desktopMenu}>
           <li>

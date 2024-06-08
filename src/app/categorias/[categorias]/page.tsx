@@ -4,6 +4,7 @@ import { PageParams } from "@/interfaces/Produtos-types";
 import Link from "next/link";
 import Image from "next/image";
 import style from "@/componentes/produtosComponentes/GetProdutosDestaque.module.css";
+import { token } from "@/app/api/api";
 
 const CategoriasPage = ({ params }: PageParams) => {
   const [produtos, setProdutos] = useState([]);
@@ -12,14 +13,13 @@ const CategoriasPage = ({ params }: PageParams) => {
 
   useEffect(() => {
     const fetchProdutos = async () => {
-      const url = `https://apikomode.altuori.com/wp-json/api/produto?categoria=${params.categorias}&_limit=8`;
+      const url = `https://apikomode.altuori.com/wp-json/api/produto?categoria=${params.categorias}&_limit=8&cor=preto`;
 
       try {
         const response = await fetch(url, {
           cache: "no-store",
           headers: {
-            Authorization:
-              "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaWtvbW9kZS5hbHR1b3JpLmNvbSIsImlhdCI6MTcxNTY0NDgwMCwibmJmIjoxNzE1NjQ0ODAwLCJleHAiOjI1Nzk2NDQ4MDAsImRhdGEiOnsidXNlciI6eyJpZCI6IjIifX19.tQ-Uuz58JbI2ksAdPJz-6OaBh6TUAE31jsbg84oXshQ",
+            Authorization: `Bearer`,
           },
         });
 
