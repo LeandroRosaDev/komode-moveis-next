@@ -18,7 +18,6 @@ export default function Home() {
       {/* <h1>
         Olá Mariazinha, bem vinda ao Inicio do seu Sonho papai ta lutando muito!
       </h1> */}
-      {/* <Slide /> */}
       <div className={style.bg}></div>
       <section className={style.gridProdutosContainer}>
         <h1 className="mainTitle">Produtos Populares</h1>

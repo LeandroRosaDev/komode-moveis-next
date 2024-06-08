@@ -28,7 +28,7 @@ const CategoriasPage = ({ params }: PageParams) => {
         }
 
         const data: any = await response.json();
-        console.log("Dados recebidos:", data); // Logging para verificar os dados
+        console.log("Dados recebidos:", data);
         if (!data || data.length === 0) {
           throw new Error("Nenhum produto encontrado");
         }
