@@ -31,12 +31,16 @@ a {
 
 .buttonTransparent {
   background-color: transparent;
+  display: flex;
+  gap: 4px;
+  justify-content: center;
   padding: 20px 35px;
   border: 1px solid white;
   border-radius: 4px;
   cursor: pointer;
   color: white;
 }
+
 .buttonTransparent:hover {
   background-color: white;
   transition: all 0.5s;
