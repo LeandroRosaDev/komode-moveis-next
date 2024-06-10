@@ -1,8 +1,8 @@
-import Image from "next/image";
-import style from "./duvidas.module.css";
-import duvidas1 from "@/../public/assets/duvidas/duvidas-img-1.png";
-import duvidas2 from "@/../public/assets/duvidas/duvidas-img-2.png";
-import duvidas3 from "@/../public/assets/duvidas/duvidas-img-3.png";
+import Image from 'next/image';
+import style from './duvidas.module.css';
+import duvidas1 from '@/../public/assets/duvidas/duvidas-img-1.png';
+import duvidas2 from '@/../public/assets/duvidas/duvidas-img-2.png';
+import duvidas3 from '@/../public/assets/duvidas/duvidas-img-3.png';
 
 export default async function DuvidasPage() {
   return (

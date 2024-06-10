@@ -1,4 +1,4 @@
-.duvidasContainer {
+.politicasContainer {
   width: 100%;
 }
 .bg {
@@ -7,9 +7,7 @@
   width: 100%;
   background-size: cover;
   background-position: center;
-
   margin-top: -200px;
-
   color: white;
   text-align: center;
   display: flex;
@@ -24,30 +22,37 @@
   text-transform: uppercase;
   font-weight: 300;
 }
-.gridDuvidasContainer {
+.containerDivs {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  gap: 4rem;
-  margin: 6rem;
+  gap: 10px;
+  margin-top: 10px;
 }
-.duvidasContent {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1rem;
+.politicasSubTitle {
+  margin: 10px 0;
+  color: #bebebe;
 }
-.duvidasContent img {
-  max-width: 600px;
-  max-height: 400px;
+.politicasFrequentes {
+  margin: 10px 0;
 }
-.duvidasContent h3 {
-  max-width: 600px;
+.politicasText {
+  margin: 10px 0;
+  max-width: 850px;
 }
-#imgNone {
-  display: none;
+.containerLi {
+  max-width: 300px;
+  margin: 10px;
 }
-.duvidasContent span {
-  font-size: 3rem;
+.containerLi li {
+  margin: 10px 0;
+  font-weight: 500;
+}
+.containerLi a:hover {
+  color: red;
+}
+.politicasLine {
+  width: 100%;
+  color: white;
+  opacity: 0.3;
+  margin: 5px 0;
 }
