@@ -41,9 +41,10 @@ export default function Home() {
             <Image src={iconCategoria1} alt="Icone de uma sofá" />
             <p>Sala de Estar</p>
             <div>
-              <h1>Os melhores móveis para a sua casa</h1>
+              <h1>Os melhores móveis para a sua sala de estar</h1>
               <p>
-                Venha conferir os melhores móveis de escritório para a sua casa
+                Venha conferir os melhores móveis para decorar a sua sala de
+                estar!
               </p>
             </div>
           </Link>
@@ -55,10 +56,8 @@ export default function Home() {
             <Image src={iconCategoria2} alt="Icone de uma cama" />
             <p>Quarto</p>
             <div>
-              <h1>Os melhores móveis para a sua casa</h1>
-              <p>
-                Venha conferir os melhores móveis de escritório para a sua casa
-              </p>
+              <h1>Os melhores móveis para o seu quarto</h1>
+              <p>Venha mobiliar seu quarto com os melhores móveis!</p>
             </div>
           </Link>
           <Link
@@ -69,9 +68,9 @@ export default function Home() {
             <Image src={iconCategoria3} alt="Icone de um escrivaninha" />
             <p>Escritório</p>
             <div>
-              <h1>Os melhores móveis para a sua casa</h1>
+              <h1>Os melhores móveis para o seu escritório</h1>
               <p>
-                Venha conferir os melhores móveis de escritório para a sua casa
+                Venha conferir os melhores móveis de escritório para a sua casa!
               </p>
             </div>
           </Link>
@@ -83,10 +82,8 @@ export default function Home() {
             <Image src={iconCategoria4} alt="Icone de um banheiro" />
             <p>Banheiro</p>
             <div>
-              <h1>Os melhores móveis para a sua casa</h1>
-              <p>
-                Venha conferir os melhores móveis de escritório para a sua casa
-              </p>
+              <h1>Os melhores móveis para o seu banheiro</h1>
+              <p>Que tal um banheiro dos sonhos? Aqui você pode!</p>
             </div>
           </Link>
         </div>

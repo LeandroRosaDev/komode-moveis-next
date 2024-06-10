@@ -1,9 +1,9 @@
 import Link from "next/link";
 import style from "./Menu.module.css";
 import logotipo from "@/../public/assets/logotipo.png";
-import socialIcon1 from "@/../public/assets/menu-social-logo-1.png";
-import socialIcon2 from "@/../public/assets/menu-social-logo-2.png";
-import socialIcon3 from "@/../public/assets/menu-social-logo-3.png";
+import socialIcon1 from "@/../public/assets/icon/menu-icon-1.svg";
+import socialIcon2 from "@/../public/assets/icon/menu-icon-2.svg";
+import socialIcon3 from "@/../public/assets/icon/menu-icon-3.svg";
 import Image from "next/image";
 
 export default async function Menu() {
