@@ -13,13 +13,12 @@ const CategoriasPage = ({ params }: PageParams) => {
 
   useEffect(() => {
     const fetchProdutos = async () => {
-      const url = `https://apikomode.altuori.com/wp-json/api/produto?categoria=${params.categorias}&_limit=8&cor=preto`;
-
+      const url = `https://apikomode.altuori.com/wp-json/api/produto?categoria=${params.categorias}&_limit=8`;
       try {
         const response = await fetch(url, {
           cache: "no-store",
           headers: {
-            Authorization: `Bearer`,
+            Authorization: `Bearer ${token}`,
           },
         });
 

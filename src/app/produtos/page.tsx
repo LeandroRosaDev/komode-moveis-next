@@ -17,31 +17,31 @@ export default function ProdutosPage() {
         <p>Confira abaixo todos os produtos disponíveis em nosso estoque</p>
       </div>
       <div className={style.gridCategorias}>
-        <Link href="subcategorias/sofa retratil">
+        <Link href="/subcategorias/sofa retratil">
           <Image src={icon1} alt="Icone de um sofá" width={150} />
           <p>Sofás</p>
         </Link>
-        <Link href="subcategorias/escritorio">
+        <Link href="/subcategorias/escritorio">
           <Image src={icon2} alt="Icone de um sofá" width={150} />
           <p>Escritório</p>
         </Link>
-        <Link href="subcategorias/banheiro">
+        <Link href="/subcategorias/banheiro">
           <Image src={icon3} alt="Icone de um sofá" width={150} />
           <p>Banheiro</p>
         </Link>
-        <Link href="subcategorias/balcao de cozinha">
+        <Link href="/subcategorias/balcao de cozinha">
           <Image src={icon4} alt="Icone de um sofá" width={150} />
           <p>Cozinha</p>
         </Link>
-        <Link href="subcategorias/cama de casal">
+        <Link href="/subcategorias/cama de casal">
           <Image src={icon5} alt="Icone de um sofá" width={150} />
           <p>Cama de Casal</p>
         </Link>
-        <Link href="subcategorias/guarda roupa de solteiro">
+        <Link href="/subcategorias/guarda roupa de solteiro">
           <Image src={icon6} alt="Icone de um sofá" width={150} />
           <p>Guarda Roupas</p>
         </Link>
-        <Link href="subcategorias/mesa de jantar">
+        <Link href="/subcategorias/mesa de jantar">
           <Image src={icon7} alt="Icone de um sofá" width={150} />
           <p>Mesas de Jantar</p>
         </Link>
