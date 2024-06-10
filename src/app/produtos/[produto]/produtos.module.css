@@ -1,5 +1,33 @@
+.bg {
+  background-image: url("../../../../public/assets/produtos/produtos-bg.jpg");
+  height: 400px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+
+  margin-top: -200px;
+
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.bg h1 {
+  text-align: center;
+  margin-top: 200px;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+.content {
+  margin: 2rem auto;
+  max-width: 1000px;
+}
 .produtoPage {
   font-family: Arial, sans-serif;
+  width: 100%;
 }
 
 .voltar {
@@ -12,6 +40,9 @@
 .produtoContainer {
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 2rem;
 }
 
 .produtoImages {
@@ -23,6 +54,7 @@
 
 .thumbnailContainer {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
 }
 
@@ -35,6 +67,7 @@
 .mainImage {
   border: 1px solid #ccc;
   border-radius: 5px;
+  background-color: blue;
 }
 
 .produtoInfo {
@@ -90,7 +123,7 @@
 }
 
 .descricaoContainer {
-  margin-top: 20px;
+  margin: 1rem 2rem;
 }
 
 .descricaoMenu {
