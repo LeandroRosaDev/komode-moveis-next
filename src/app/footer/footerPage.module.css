@@ -79,3 +79,27 @@
   color: white;
   opacity: 0.3;
 }
+.direitosFooter {
+  display: flex;
+  gap: 7px;
+}
+
+@media (max-width: 580px) {
+  .contato {
+    display: none;
+  }
+  .linha {
+    display: none;
+  }
+  .linksUteis {
+    justify-content: center;
+    text-align: center;
+  }
+  .direitosFooter {
+    flex-direction: column;
+    text-align: center;
+  }
+  .lowFooter {
+    margin-top: 20px;
+  }
+}

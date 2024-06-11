@@ -82,7 +82,7 @@ export default async function FooterPage() {
             <Image src={socialIcon3} alt="Ícone do whatsapp" />
           </a>
         </div>
-        <div style={{ display: 'flex', gap: '7px' }}>
+        <div className={style.direitosFooter}>
           <p>Todos os direitos reservados.</p>
           <p>
             Esta é uma empresa do{' '}
