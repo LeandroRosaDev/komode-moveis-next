@@ -1,3 +1,4 @@
+// componentes/produtosComponentes/CategoriasPage.tsx
 "use client";
 import { useEffect, useState, useCallback } from "react";
 import { PageParams } from "@/interfaces/Produtos-types";
@@ -63,7 +64,8 @@ const CategoriasPage = ({ params }: PageParams) => {
       <CategoriasMenu />
       <FiltroComponent params={params} onFilterChange={handleFilterChange} />
       <h1 style={{ textAlign: "center", margin: "2rem" }}>
-        Exibindo todos os produtos para {params.categorias}
+        Exibindo todos os produtos para{" "}
+        {decodeURIComponent(params.categorias).replace(/%20/g, " ")}
       </h1>
       <div className={style.gridProdutosContainer}>
         <div className={style.gridContainer}>
