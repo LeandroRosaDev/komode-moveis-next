@@ -5,6 +5,9 @@ import iconCategoria1 from "../../public/assets/categoria-icon-1.png";
 import iconCategoria2 from "../../public/assets/categoria-icon-2.png";
 import iconCategoria3 from "../../public/assets/categoria-icon-3.png";
 import iconCategoria4 from "../../public/assets/categoria-icon-4.png";
+import iconTarja1 from "../../public/assets/8.svg";
+import iconTarja2 from "../../public/assets/9.svg";
+import iconTarja3 from "../../public/assets/10.svg";
 import duvida1 from "../../public/assets/duvidas-img-1.png";
 import duvida2 from "../../public/assets/duvidas-img-2.png";
 import duvida3 from "../../public/assets/duvidas-img-3.png";
@@ -18,7 +21,18 @@ export default function Home() {
       {/* <h1>
         Olá Mariazinha, bem vinda ao Inicio do seu Sonho papai ta lutando muito!
       </h1> */}
+
       <div className={style.bg}></div>
+      <div className={style.tarjaVermelha}>
+        <h1>Todos os produtos com frete grátis para todo o Rio de Janeiro </h1>
+        <Image src={iconTarja1} alt="Iconde de um caminhao" width={50} />
+        <h1>pagamento em até 12x sem juros no cartão e</h1>
+        <Image src={iconTarja2} alt="Iconde de um caminhao" width={50} />
+
+        <h1> e você só vai pagar no hora da entrega</h1>
+
+        <Image src={iconTarja3} alt="Iconde de um caminhao" width={50} />
+      </div>
       <section className={style.gridProdutosContainer}>
         <h1 className="mainTitle">Produtos Populares</h1>
         <h3 className="secondTitle">

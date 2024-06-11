@@ -6,6 +6,19 @@
   background-position: center;
   margin-top: -200px;
 }
+.tarjaVermelha {
+  width: 100%;
+  background-color: rgb(199, 35, 35);
+  color: white;
+  display: flex;
+  justify-content: center;
+  font-size: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+  text-transform: uppercase;
+  gap: 0.5rem;
+}
+
 .gridProdutosContainer,
 .sobreContainer,
 .categoriasSectionContainer,

@@ -3,7 +3,7 @@ import { token } from "@/app/api/api";
 
 export async function getProductsDestaqueAction() {
   const response = await fetch(
-    "https://apikomode.altuori.com/wp-json/api/produto?_limit=9&situacao=destaque",
+    "https://apikomode.altuori.com/wp-json/api/produto?_limit=12&situacao=destaque",
     {
       cache: "no-store",
       headers: { Authorization: `Bearer ${token}` },

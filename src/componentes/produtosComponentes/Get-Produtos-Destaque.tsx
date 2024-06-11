@@ -61,12 +61,18 @@ export default function GetProdutosDestaque() {
                   Ver detalhes
                 </Link>
               </div>
-              <h2>
-                {produto.nome} {produto.largura}m
-              </h2>
-              <p>De: {produto.preco}</p>
-              <p>Por: {produto.preco}</p>
-              <p>Ou no cartão em até 12x de: {produto.preco}</p>
+              <div className={style.textDescription}>
+                <h2>{produto.nome}</h2>
+                <p className={style.precoOriginal}>
+                  De: {produto.preco_original}
+                </p>
+                <p className={style.precoDesconto}>
+                  Por: {produto.preco} <span>a vista</span>
+                </p>
+                <p className={style.precoParcelado}>
+                  Ou no cartão em até 12x de: {produto.preco_parcelado}
+                </p>
+              </div>
             </div>
           ))}
         </div>

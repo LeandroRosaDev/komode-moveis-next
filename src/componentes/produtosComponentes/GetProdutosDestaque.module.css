@@ -10,13 +10,13 @@
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
-  max-width: 1300px;
+  max-width: 1400px;
   margin: 2rem auto;
 }
 
 .gridProdutosContent {
   position: relative;
-  max-width: 400px;
+  width: 300px;
   background-color: white;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -25,6 +25,7 @@
   transition: transform 0.3s ease;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
   padding: 10px;
@@ -47,7 +48,7 @@
 
 .middle {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   opacity: 0;
@@ -69,4 +70,41 @@
 
 .text:hover {
   background-color: #a81707;
+}
+.textDescription {
+  text-align: start;
+  width: 250px;
+}
+.textDescription h2 {
+  font-size: 1.2rem;
+}
+.precoOriginal {
+  text-align: start;
+  text-decoration: line-through;
+  color: red;
+  font-size: 0.8rem;
+}
+.precoDesconto {
+  font-size: 1.2rem;
+}
+.precoDesconto span {
+  font-size: 0.8rem;
+}
+
+.precoParcelado {
+  font-size: 0.8rem;
+  color: gray;
+}
+@media (max-width: 600px) {
+  .mainContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .gridProdutosContent {
+    width: 90%;
+  }
+
+  .textDescription p {
+    font-size: 1rem;
+  }
 }
