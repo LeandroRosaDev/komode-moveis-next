@@ -1,19 +1,51 @@
-import { PageParams } from "@/interfaces/Produtos-types";
-import Image from "next/image";
-import style from "./produtos.module.css";
-import { token } from "@/app/api/api";
+'use client';
 
-export default async function produtoPage({ params }: PageParams) {
-  const response = await fetch(
-    `https://apikomode.altuori.com/wp-json/api/produto/${params.produto}`,
-    {
-      cache: "no-store",
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    }
-  );
-  const data = await response.json();
+import { PageParams } from '@/interfaces/Produtos-types';
+import Image from 'next/image';
+import style from './produtos.module.css';
+import { token } from '@/app/api/api';
+import { useState, useEffect } from 'react';
+
+export default function ProdutoPage({ params }: PageParams) {
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
+  const [data, setData] = useState<any>(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch(
+        `https://apikomode.altuori.com/wp-json/api/produto/${params.produto}`,
+        {
+          cache: 'no-store',
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        },
+      );
+      const data = await response.json();
+      setData(data);
+    };
+    fetchData();
+  }, [params.produto]);
+
+  if (!data) {
+    return <div>Loading...</div>;
+  }
+
+  const handleThumbnailClick = (index: number) => {
+    setCurrentIndex(index);
+  };
+
+  const handlePrevClick = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex > 0 ? prevIndex - 1 : data.fotos.length - 1,
+    );
+  };
+
+  const handleNextClick = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex < data.fotos.length - 1 ? prevIndex + 1 : 0,
+    );
+  };
 
   return (
     <section className={style.produtoPage}>
@@ -27,22 +59,33 @@ export default async function produtoPage({ params }: PageParams) {
       <div className={style.content}>
         <div className={style.produtoContainer}>
           <div className={style.produtoImages}>
-            <Image
-              src={data.fotos[0].src}
-              alt={data.fotos[0].titulo}
-              width={600}
-              height={500}
-              className={style.mainImage}
-            />
+            <div className={style.imageContainer}>
+              <button className={style.navButton} onClick={handlePrevClick}>
+                &lt;
+              </button>
+              <Image
+                src={data.fotos[currentIndex].src}
+                alt={data.fotos[currentIndex].titulo}
+                width={600}
+                height={500}
+                className={style.mainImage}
+              />
+              <button className={style.navButton} onClick={handleNextClick}>
+                &gt;
+              </button>
+            </div>
             <div className={style.thumbnailContainer}>
-              {data.fotos.map((foto: any, index: any) => (
+              {data.fotos.map((foto: any, index: number) => (
                 <Image
                   key={index}
                   src={foto.src}
                   alt={foto.titulo}
                   width={100}
                   height={80}
-                  className={style.thumbnail}
+                  className={`${style.thumbnail} ${
+                    currentIndex === index ? style.activeThumbnail : ''
+                  }`}
+                  onClick={() => handleThumbnailClick(index)}
                 />
               ))}
             </div>
