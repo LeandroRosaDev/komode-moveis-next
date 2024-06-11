@@ -30,8 +30,8 @@ export default async function produtoPage({ params }: PageParams) {
             <Image
               src={data.fotos[0].src}
               alt={data.fotos[0].titulo}
-              width={400}
-              height={300}
+              width={600}
+              height={500}
               className={style.mainImage}
             />
             <div className={style.thumbnailContainer}>
