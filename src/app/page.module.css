@@ -105,26 +105,6 @@
 
 /* DUVIDAS */
 
-/* .duvidasContent {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.LinksDuvidas {
-  background-color: white;
-}
-.LinksDuvidas:hover {
-  transform: scale(104%);
-  transition: 0.5s;
-}
-
-.LinksDuvidas h1 {
-  font-size: 1.4rem;
-  padding: 10px;
-  text-align: center;
-} */
 .duvidasContent {
   display: flex;
   flex-wrap: wrap;

@@ -4,6 +4,9 @@ import { PageParams, Produto } from "@/interfaces/Produtos-types";
 import Link from "next/link";
 import Image from "next/image";
 import { token } from "@/app/api/api";
+import CategoriasMenu from "@/componentes/produtosComponentes/categorias/CategoriasMenu";
+import style from "./subcategorias.module.css";
+import FiltroComponent from "@/componentes/FiltroComponente";
 
 const SubCategoriasPage = ({ params }: PageParams) => {
   const [produtos, setProdutos] = useState([]);
@@ -12,7 +15,7 @@ const SubCategoriasPage = ({ params }: PageParams) => {
 
   useEffect(() => {
     const fetchProdutos = async () => {
-      const url = `https://apikomode.altuori.com/wp-json/api/produto?sub_categoria=${params.subcategorias}`;
+      const url = `https://apikomode.altuori.com/wp-json/api/produto?sub_categoria=${params.subcategorias}&`;
 
       try {
         const response = await fetch(url, {
@@ -27,14 +30,12 @@ const SubCategoriasPage = ({ params }: PageParams) => {
         }
 
         const data: any = await response.json();
-        console.log("Dados recebidos:", data);
         if (!data || data.length === 0) {
           throw new Error("Nenhum produto encontrado");
         }
 
         setProdutos(data);
       } catch (error: any) {
-        console.error("Erro na requisição:", error);
         setError(error.message);
       } finally {
         setLoading(false);
@@ -48,20 +49,35 @@ const SubCategoriasPage = ({ params }: PageParams) => {
   if (error) return <p>Erro: {error}</p>;
 
   return (
-    <section>
-      <div>
+    <section className={style.section}>
+      <CategoriasMenu />
+
+      <h1>Exibindo todos os produtos disponíveis</h1>
+      <div className={style.gridContainer}>
         {produtos.map((produto: any) => (
-          <div key={produto.id}>
-            <h1>{produto.nome} </h1>
+          <div key={produto.id} className={style.gridProdutosContent}>
             {produto.fotos && produto.fotos.length > 0 && (
-              <Image
-                src={produto.fotos[1].src}
-                alt={`Imagem de ${produto.nome}`}
-                width={400}
-                height={300}
-              />
+              <Link href={`/produtos/${produto.id}`}>
+                <Image
+                  src={produto.fotos[1].src}
+                  alt={`Imagem de ${produto.nome}`}
+                  width={300}
+                  height={200}
+                  className={style.image}
+                />
+              </Link>
             )}
-            <Link href={`/produtos/${produto.id}`}>Ver detalhes</Link>
+            <div className={style.middle}>
+              <Link className={style.text} href={`/produtos/${produto.id}`}>
+                Ver detalhes
+              </Link>
+            </div>
+            <h2>
+              {produto.nome} {produto.largura}m
+            </h2>
+            <p>De: {produto.preco}</p>
+            <p>Por: {produto.preco}</p>
+            <p>Ou no cartão em até 12x de: {produto.preco}</p>
           </div>
         ))}
       </div>

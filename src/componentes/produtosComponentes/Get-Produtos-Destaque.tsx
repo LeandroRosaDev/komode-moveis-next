@@ -40,11 +40,11 @@ export default function GetProdutosDestaque() {
   }
 
   return (
-    <section className="gridMain">
+    <section>
       <div className={style.gridProdutosContainer}>
-        {produtos.length > 0 ? (
-          produtos.map((produto) => (
-            <div className={style.gridProdutosContent} key={produto.id}>
+        <div className={style.gridContainer}>
+          {produtos.map((produto: any) => (
+            <div key={produto.id} className={style.gridProdutosContent}>
               {produto.fotos && produto.fotos.length > 0 && (
                 <Link href={`/produtos/${produto.id}`}>
                   <Image
@@ -61,23 +61,16 @@ export default function GetProdutosDestaque() {
                   Ver detalhes
                 </Link>
               </div>
-              <div className={style.infoContent}>
-                <h1>{produto.nome}</h1>
-                <h5>De R$ 1599,00</h5>
-                <h3>
-                  Por R$ {produto.preco} <span>no Pix</span>
-                </h3>
-                <h6>Ou em até 12x de R$ 363,00</h6>
-              </div>
+              <h2>
+                {produto.nome} {produto.largura}m
+              </h2>
+              <p>De: {produto.preco}</p>
+              <p>Por: {produto.preco}</p>
+              <p>Ou no cartão em até 12x de: {produto.preco}</p>
             </div>
-          ))
-        ) : (
-          <div className={style.noProducts}>Nenhum produto encontrado.</div>
-        )}
+          ))}
+        </div>
       </div>
-      <Link href="">
-        <button className={style.button}>Veja nosso estoque!</button>
-      </Link>
     </section>
   );
 }

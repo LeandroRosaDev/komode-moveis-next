@@ -1,5 +1,5 @@
-import Image from 'next/image';
-import style from './sobre.module.css';
+import Image from "next/image";
+import style from "./sobre.module.css";
 
 export default function SobrePage() {
   return (
@@ -10,7 +10,7 @@ export default function SobrePage() {
       </div>
       <section className={style.sobreContainer}>
         <h1 className="mainTitle">O início de tudo</h1>
-        <h3 className="secondTitle" style={{ maxWidth: '900px' }}>
+        <h3 className="secondTitle" style={{ maxWidth: "900px" }}>
           Nossa historia sempre foi acompanhada de muita dedicação e esforço,
           trabalhamos duro e nos esforçamos desde o inicio para entregar
           produtos de excelente qualidade, sempre prezando pelo respeito mútuo
@@ -19,7 +19,7 @@ export default function SobrePage() {
       </section>
       <div
         className={style.sobreTimelineContainer}
-        style={{ marginTop: '60px' }}
+        style={{ marginTop: "60px" }}
       >
         <div className={style.sobreContent}>
           <Image
@@ -121,7 +121,7 @@ export default function SobrePage() {
       <hr className={style.timeLine} />
       <div
         className={style.sobreTimelineContainer}
-        style={{ marginBottom: '60px' }}
+        style={{ marginBottom: "60px" }}
       >
         <div className={style.sobreContent}>
           <Image
@@ -155,7 +155,9 @@ export default function SobrePage() {
         </div>
       </div>
       <div className={style.parallax}>
-        <h1 className="mainTitle">NOSSA HISTÓRIA</h1>
+        <h1 className="mainTitle" style={{ color: "white" }}>
+          NOSSA HISTÓRIA
+        </h1>
         <h3 className={`secondTitle ${style.h3History}`}>
           Acreditamos na criatividade como uma das principais forças do
           progresso. Com essa ideia, montamos uma linha de móveis excepcionais

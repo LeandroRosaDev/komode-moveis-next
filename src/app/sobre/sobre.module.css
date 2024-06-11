@@ -1,5 +1,5 @@
 .bg {
-  background-image: url('../../../public/assets/sobre/pag-sobre-bg.jpg');
+  background-image: url("../../../public/assets/sobre/pag-sobre-bg.jpg");
   height: 450px;
   width: 100%;
   background-size: cover;
@@ -64,10 +64,36 @@
   max-width: 60%;
 }
 
+.timeLine {
+  width: 0px;
+  height: 80px;
+  color: red;
+  margin: auto;
+  border: 1px solid red;
+}
+
+.parallax {
+  height: 500px;
+  background-image: url("../../../public/assets/sobre/paralax-img.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 100px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 4rem;
+  color: white;
+}
+
 @media (max-width: 1360px) {
   .sobreContent {
     flex-direction: column;
-    width: 52%;
+    width: 100%;
+    margin: 1rem;
   }
   .card {
     margin-top: -78px;
@@ -85,29 +111,11 @@
   .h3History {
     max-width: 100%;
   }
-}
-
-.timeLine {
-  width: 0px;
-  height: 80px;
-  color: red;
-  margin: auto;
-  border: 1px solid red;
-}
-
-.parallax {
-  height: 500px;
-  background-image: url('../../../public/assets/sobre/paralax-img.jpg');
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin-bottom: 100px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0 4rem;
-  color: white;
+  .sobreContent h3 {
+    width: 95%;
+    margin: 1rem;
+  }
+  .parallax {
+    padding: 1rem;
+  }
 }

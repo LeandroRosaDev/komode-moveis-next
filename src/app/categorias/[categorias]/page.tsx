@@ -1,83 +1,99 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { PageParams } from "@/interfaces/Produtos-types";
 import Link from "next/link";
 import Image from "next/image";
 import style from "@/componentes/produtosComponentes/GetProdutosDestaque.module.css";
 import { token } from "@/app/api/api";
+import CategoriasMenu from "@/componentes/produtosComponentes/categorias/CategoriasMenu";
+import FiltroComponent from "@/componentes/FiltroComponente";
 
 const CategoriasPage = ({ params }: PageParams) => {
   const [produtos, setProdutos] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [filters, setFilters] = useState<Record<string, string>>({});
+
+  const fetchProdutos = useCallback(async () => {
+    let url = `https://apikomode.altuori.com/wp-json/api/produto?categoria=${params.categorias}`;
+    Object.keys(filters).forEach((key) => {
+      url += `&${key}=${filters[key]}`;
+    });
+
+    try {
+      const response = await fetch(url, {
+        cache: "no-store",
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error("Falha ao buscar dados");
+      }
+
+      const data: any = await response.json();
+      console.log("Dados recebidos:", data);
+      if (!data || data.length === 0) {
+        throw new Error("Nenhum produto encontrado");
+      }
+
+      setProdutos(data);
+    } catch (error: any) {
+      console.error("Erro na requisição:", error);
+      setError(error.message);
+    } finally {
+      setLoading(false);
+    }
+  }, [params, filters]);
 
   useEffect(() => {
-    const fetchProdutos = async () => {
-      const url = `https://apikomode.altuori.com/wp-json/api/produto?categoria=${params.categorias}&_limit=8`;
-      try {
-        const response = await fetch(url, {
-          cache: "no-store",
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        });
-
-        if (!response.ok) {
-          throw new Error("Falha ao buscar dados");
-        }
-
-        const data: any = await response.json();
-        console.log("Dados recebidos:", data);
-        if (!data || data.length === 0) {
-          throw new Error("Nenhum produto encontrado");
-        }
-
-        setProdutos(data);
-      } catch (error: any) {
-        console.error("Erro na requisição:", error);
-        setError(error.message);
-      } finally {
-        setLoading(false);
-      }
-    };
-
     fetchProdutos();
-  }, [params]);
+  }, [fetchProdutos]);
+
+  const handleFilterChange = (newFilters: Record<string, string>) => {
+    setFilters(newFilters);
+  };
 
   if (loading) return <p>Carregando...</p>;
   if (error) return <p>Erro: {error}</p>;
 
   return (
-    <section>
+    <section style={{ width: "100%" }}>
+      <CategoriasMenu />
+      <FiltroComponent params={params} onFilterChange={handleFilterChange} />
+      <h1 style={{ textAlign: "center", margin: "2rem" }}>
+        Exibindo todos os produtos para {params.categorias}
+      </h1>
       <div className={style.gridProdutosContainer}>
-        {produtos.map((produto: any) => (
-          <div className={style.gridProdutosContent} key={produto.id}>
-            {produto.fotos && produto.fotos.length > 0 && (
-              <Link href={`/produtos/${produto.id}`}>
-                <Image
-                  className={style.image}
-                  src={produto.fotos[1].src}
-                  alt={`Imagem de ${produto.nome}`}
-                  width={300}
-                  height={100}
-                />
-              </Link>
-            )}
-            <div className={style.middle}>
-              <Link className={style.text} href={`/produtos/${produto.id}`}>
-                Ver detalhes
-              </Link>
+        <div className={style.gridContainer}>
+          {produtos.map((produto: any) => (
+            <div key={produto.id} className={style.gridProdutosContent}>
+              {produto.fotos && produto.fotos.length > 0 && (
+                <Link href={`/produtos/${produto.id}`}>
+                  <Image
+                    src={produto.fotos[1].src}
+                    alt={`Imagem de ${produto.nome}`}
+                    width={300}
+                    height={200}
+                    className={style.image}
+                  />
+                </Link>
+              )}
+              <div className={style.middle}>
+                <Link className={style.text} href={`/produtos/${produto.id}`}>
+                  Ver detalhes
+                </Link>
+              </div>
+              <h2>
+                {produto.nome} {produto.largura}m
+              </h2>
+              <p>De: {produto.preco}</p>
+              <p>Por: {produto.preco}</p>
+              <p>Ou no cartão em até 12x de: {produto.preco}</p>
             </div>
-            <div className={style.infoContent}>
-              <h1>{produto.nome}</h1>
-              <h5>De R$ 1599,00</h5>
-              <h3>
-                Por R$ {produto.preco} <span>no Pix</span>
-              </h3>
-              <h6>Ou em até 12x de R$ 363,00</h6>
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

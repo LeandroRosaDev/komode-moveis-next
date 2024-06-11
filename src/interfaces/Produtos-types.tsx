@@ -22,7 +22,7 @@ export type Produto = {
   preco_original: string;
   preco_parcelado: string;
   cor: string;
-  categoria?: string;
+  categoria?: string | null;
   produto_cod?: string;
   link_1?: string;
   link_2?: string;

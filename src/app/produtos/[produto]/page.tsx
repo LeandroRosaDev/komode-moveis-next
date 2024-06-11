@@ -84,7 +84,7 @@ export default async function produtoPage({ params }: PageParams) {
               {data.nome_long} {data.cor}
             </h3>
             <p>{data.descricao}</p>
-            <h3>Medidas do Sofá:</h3>
+            <h3>Medidas:</h3>
             <p>Altura: {data.altura}m</p>
             <p>Largura: {data.largura}m</p>
             <p>Profundidade do sofá aberto: {data.profundidade_aberto}m</p>
@@ -93,7 +93,7 @@ export default async function produtoPage({ params }: PageParams) {
             <p>{data.assento}</p>
             <h3>Encosto:</h3>
             <p>{data.encosto}</p>
-            <h3>Estrutura:</h3>
+            <h3>Características:</h3>
             <p>{data.estrutura}</p>
             <h3>Braços:</h3>
             <p>{data.braco}</p>
