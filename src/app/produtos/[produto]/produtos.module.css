@@ -1,5 +1,5 @@
 .bg {
-  background-image: url("../../../../public/assets/produtos/produtos-bg.jpg");
+  background-image: url('../../../../public/assets/produtos/produtos-bg.jpg');
   height: 400px;
   width: 100%;
   background-size: cover;
@@ -155,4 +155,49 @@
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
+}
+
+.imageContainer {
+  position: relative;
+  width: 600px;
+  display: flex;
+  align-items: center;
+}
+
+.navButton {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.navButton:hover {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.navButton:first-of-type {
+  left: 10px;
+}
+
+.navButton:last-of-type {
+  right: 10px;
+}
+
+.activeThumbnail {
+  border: 2px solid blue;
+}
+
+@media (max-width: 630px) {
+  .mainImage {
+    width: 400px;
+    height: 320px;
+  }
+
+  .imageContainer {
+    width: 400px;
+  }
 }
