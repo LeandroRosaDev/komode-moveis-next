@@ -1,9 +1,9 @@
-import Link from "next/link";
-import style from "./footerPage.module.css";
-import Image from "next/image";
-import socialIcon1 from "../../../public/assets/footer-social-1.png";
-import socialIcon2 from "../../../public/assets/footer-social-2.png";
-import socialIcon3 from "../../../public/assets/footer-social-3.png";
+import Link from 'next/link';
+import style from './footerPage.module.css';
+import Image from 'next/image';
+import socialIcon1 from '../../../public/assets/footer-social-1.png';
+import socialIcon2 from '../../../public/assets/footer-social-2.png';
+import socialIcon3 from '../../../public/assets/footer-social-3.png';
 export default async function FooterPage() {
   return (
     <footer className={style.containerFooter}>
@@ -24,7 +24,7 @@ export default async function FooterPage() {
               />
               Encontre-nos
             </Link>
-            <div style={{ display: "flex", gap: "2px" }}>
+            <div style={{ display: 'flex', gap: '2px' }}>
               <Image
                 src="/assets/icon/Phone.svg"
                 width={30}
@@ -34,9 +34,9 @@ export default async function FooterPage() {
               <a
                 href=""
                 style={{
-                  color: "#a80e00",
-                  fontSize: "1.5rem",
-                  fontWeight: "700",
+                  color: '#a80e00',
+                  fontSize: '1.5rem',
+                  fontWeight: '700',
                 }}
               >
                 (21)2100 0000
@@ -82,12 +82,12 @@ export default async function FooterPage() {
             <Image src={socialIcon3} alt="Ícone do whatsapp" />
           </a>
         </div>
-        <div style={{ display: "flex", gap: "7px" }}>
+        <div style={{ display: 'flex', gap: '7px' }}>
           <p>Todos os direitos reservados.</p>
           <p>
-            Esta é uma empresa do{" "}
+            Esta é uma empresa do{' '}
             <a
-              style={{ fontWeight: "bold" }}
+              style={{ fontWeight: 'bold' }}
               target="blank"
               href="https://altuori.com/"
             >
