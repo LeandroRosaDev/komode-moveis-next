@@ -24,8 +24,11 @@
 .gridCategorias {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 2rem;
-  padding: 2rem;
+  padding: 1rem;
+  width: 100%;
+  height: 100%;
   background-color: white;
 }
 .gridCategorias a {

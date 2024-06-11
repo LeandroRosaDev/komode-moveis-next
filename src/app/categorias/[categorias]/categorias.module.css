@@ -28,6 +28,7 @@
   align-items: center;
   text-align: center;
   padding: 10px;
+  justify-content: space-between;
 }
 
 .gridProdutosContent:hover {
@@ -69,4 +70,40 @@
 
 .text:hover {
   background-color: #a81707;
+}
+.precoOriginal {
+  text-align: start;
+  text-decoration: line-through;
+  color: red;
+  font-size: 0.8rem;
+}
+.textDescription {
+  text-align: start;
+}
+.precoDesconto {
+  font-size: 1.3rem;
+}
+.precoDesconto span {
+  font-size: 0.8rem;
+}
+
+.precoParcelado {
+  font-size: 1em;
+  color: gray;
+}
+
+@media (max-width: 600px) {
+  .mainContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .gridProdutosContent {
+    width: 90%;
+  }
+  .textDescription h2 {
+    font-size: 1rem;
+  }
+  .textDescription p {
+    font-size: 0.8rem;
+  }
 }
