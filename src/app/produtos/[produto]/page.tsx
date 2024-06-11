@@ -1,10 +1,11 @@
-'use client';
+"use client";
 
-import { PageParams } from '@/interfaces/Produtos-types';
-import Image from 'next/image';
-import style from './produtos.module.css';
-import { token } from '@/app/api/api';
-import { useState, useEffect } from 'react';
+import { PageParams } from "@/interfaces/Produtos-types";
+import Image from "next/image";
+import style from "./produtos.module.css";
+import { token } from "@/app/api/api";
+import { useState, useEffect } from "react";
+import CategoriasMenu from "@/componentes/produtosComponentes/categorias/CategoriasMenu";
 
 export default function ProdutoPage({ params }: PageParams) {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
@@ -15,11 +16,11 @@ export default function ProdutoPage({ params }: PageParams) {
       const response = await fetch(
         `https://apikomode.altuori.com/wp-json/api/produto/${params.produto}`,
         {
-          cache: 'no-store',
+          cache: "no-store",
           headers: {
             Authorization: `Bearer ${token}`,
           },
-        },
+        }
       );
       const data = await response.json();
       setData(data);
@@ -37,25 +38,19 @@ export default function ProdutoPage({ params }: PageParams) {
 
   const handlePrevClick = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex > 0 ? prevIndex - 1 : data.fotos.length - 1,
+      prevIndex > 0 ? prevIndex - 1 : data.fotos.length - 1
     );
   };
 
   const handleNextClick = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex < data.fotos.length - 1 ? prevIndex + 1 : 0,
+      prevIndex < data.fotos.length - 1 ? prevIndex + 1 : 0
     );
   };
 
   return (
     <section className={style.produtoPage}>
-      <div className={style.bg}>
-        <h1>Produtos</h1>
-        <p>Confira abaixo todos os produtos disponíveis em nosso estoque</p>
-      </div>
-      <a href="/" className={style.voltar}>
-        Voltar
-      </a>
+      <CategoriasMenu />
       <div className={style.content}>
         <div className={style.produtoContainer}>
           <div className={style.produtoImages}>
@@ -83,7 +78,7 @@ export default function ProdutoPage({ params }: PageParams) {
                   width={100}
                   height={80}
                   className={`${style.thumbnail} ${
-                    currentIndex === index ? style.activeThumbnail : ''
+                    currentIndex === index ? style.activeThumbnail : ""
                   }`}
                   onClick={() => handleThumbnailClick(index)}
                 />

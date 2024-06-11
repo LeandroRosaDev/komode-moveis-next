@@ -13,7 +13,7 @@ import duvida2 from "../../public/assets/duvidas-img-2.png";
 import duvida3 from "../../public/assets/duvidas-img-3.png";
 import social from "../../public/assets/social-img.png";
 import Link from "next/link";
-// import Slide from "@/componentes/slideHome/Slide";
+import CategoriasMenuInicio from "@/componentes/produtosComponentes/categorias/CategoriasMenuInicio";
 
 export default function Home() {
   return (
@@ -21,7 +21,6 @@ export default function Home() {
       {/* <h1>
         Olá Mariazinha, bem vinda ao Inicio do seu Sonho papai ta lutando muito!
       </h1> */}
-
       <div className={style.bg}></div>
       <div className={style.tarjaVermelha}>
         <h1>Todos os produtos com frete grátis para todo o Rio de Janeiro </h1>
@@ -33,6 +32,7 @@ export default function Home() {
 
         <Image src={iconTarja3} alt="Iconde de um caminhao" width={50} />
       </div>
+      <CategoriasMenuInicio />
       <section className={style.gridProdutosContainer}>
         <h1 className="mainTitle">Produtos Populares</h1>
         <h3 className="secondTitle">

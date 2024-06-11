@@ -2,7 +2,7 @@
   width: 100%;
 }
 .bg {
-  background-image: url('../../../public/assets/duvidas/duvidas-bg.png');
+  background-image: url("../../../public/assets/duvidas/duvidas-bg.png");
   height: 500px;
   width: 100%;
   background-size: cover;

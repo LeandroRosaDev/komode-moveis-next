@@ -1,5 +1,5 @@
 .bg {
-  background-image: url('../../../../public/assets/produtos/produtos-bg.jpg');
+  background-image: url("../../../../public/assets/produtos/produtos-bg.jpg");
   height: 400px;
   width: 100%;
   background-size: cover;
@@ -167,7 +167,7 @@
 .navButton {
   background: none;
   border: none;
-  font-size: 2rem;
+  font-size: 3rem;
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -188,7 +188,7 @@
 }
 
 .activeThumbnail {
-  border: 2px solid blue;
+  border: 2px solid rgb(201, 16, 16);
 }
 
 @media (max-width: 630px) {
@@ -199,5 +199,8 @@
 
   .imageContainer {
     width: 400px;
+  }
+  .navButton {
+    font-size: 2rem;
   }
 }

@@ -1,19 +1,15 @@
-import style from "./CategoriasMenu.module.css";
+import style from "./CategoriasMenuInicio.module.css";
 import Image from "next/image";
 import Link from "next/link";
-export default function CategoriasMenu() {
+export default function CategoriasMenuInicio() {
   return (
     <main>
-      <div className={style.bg}>
-        <h1>Produtos</h1>
-        <p>Confira abaixo todos os produtos disponíveis em nosso estoque</p>
-      </div>
       <div className={style.gridCategorias}>
         <Link href="/categorias/Sala de Estar">
           <Image
             src="/assets/menu/13.svg"
             alt="Icone de um sofá"
-            width={100}
+            width={80}
             height={100}
           />
           <p>Sala de Estar</p>
@@ -22,7 +18,7 @@ export default function CategoriasMenu() {
           <Image
             src="/assets/menu/11.svg"
             alt="Icone de um sofá"
-            width={90}
+            width={70}
             height={100}
           />
           <p>Quarto de Solteiro</p>
@@ -31,7 +27,7 @@ export default function CategoriasMenu() {
           <Image
             src="/assets/menu/12.svg"
             alt="Icone de um sofá"
-            width={90}
+            width={70}
             height={100}
           />
           <p>Quarto de Casal</p>
@@ -40,7 +36,7 @@ export default function CategoriasMenu() {
           <Image
             src="/assets/menu/16.svg"
             alt="Icone de um sofá"
-            width={90}
+            width={70}
             height={100}
           />
           <p>Cozinha</p>
@@ -49,7 +45,7 @@ export default function CategoriasMenu() {
           <Image
             src="/assets/menu/8.svg"
             alt="Icone de um sofá"
-            width={80}
+            width={60}
             height={100}
           />
           <p>Banheiro</p>
@@ -58,7 +54,7 @@ export default function CategoriasMenu() {
           <Image
             src="/assets/menu/10.svg"
             alt="Icone de um sofá"
-            width={90}
+            width={70}
             height={100}
           />
           <p>Escritório</p>
@@ -68,7 +64,7 @@ export default function CategoriasMenu() {
           <Image
             src="/assets/menu/15.svg"
             alt="lavanderia"
-            width={80}
+            width={60}
             height={100}
           />
           <p>Lavanderia</p>
