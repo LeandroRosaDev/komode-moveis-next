@@ -35,7 +35,7 @@ export default function RootLayout({
       className={`${montserrat.className} ${roboto.className}`}
     >
       <head>
-        <link rel="icon" href="favicon.ico" />
+        <link rel="icon" href="/favicon.ico" />
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -47,7 +47,7 @@ export default function RootLayout({
             t.src=v;s=b.getElementsByTagName(e)[0];
             s.parentNode.insertBefore(t,s)}(window, document,'script',
             'https://connect.facebook.net/en_US/fbevents.js');
-            fbq('init', '1165633491365677');
+            fbq('init', '364157642748124');
             fbq('track', 'PageView');
             `,
           }}
@@ -57,8 +57,8 @@ export default function RootLayout({
             height={1}
             width={1}
             style={{ display: "none" }}
-            src="https://www.facebook.com/tr?id=1165633491365677&ev=PageView&noscript=1"
-            alt="tag do fb"
+            src="https://www.facebook.com/tr?id=364157642748124&ev=PageView&noscript=1"
+            alt="pixel fb"
           />
         </noscript>
       </head>
