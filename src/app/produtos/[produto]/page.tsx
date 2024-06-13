@@ -106,7 +106,11 @@ export default function ProdutoPage({ params }: PageParams) {
               ></span>
               {/* // ))} */}
             </div>
-            <a href={data.link_1} className={style.whatsappButton}>
+            <a
+              target="blank"
+              href={data.link_1}
+              className={style.whatsappButton}
+            >
               Compre via WhatsApp
             </a>
             <p>Pagamento realizado no ato da Entrega</p>
