@@ -35,7 +35,7 @@ export default function SobrePage() {
       <a
         className={style.card}
         target="blank"
-        href="https://wa.me/c/5521978991540"
+        href="https://api.whatsapp.com/send?phone=5521978991540&text=Ol%C3%A1,%20eu%20vi%20o%20an%C3%BAncio%20de%20retr%C3%A1teis%20de%20voc%C3%AAs%20e%20gostaria%20de%20saber%20mais%20a%20respeito!"
       >
         <Image
           src="/assets/whp-btn.png"

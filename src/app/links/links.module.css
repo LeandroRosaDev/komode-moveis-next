@@ -48,3 +48,12 @@
 .bg2 a:hover {
   transform: scale(104%);
 }
+@media (max-width: 600px) {
+  .bg {
+    height: 130vh;
+  }
+  .card {
+    width: 300px;
+    font-size: 0.8rem;
+  }
+}
