@@ -57,3 +57,18 @@ a {
   align-items: center;
   flex-direction: column;
 }
+.btn {
+  width: 150px;
+  padding: 10px;
+  background-color: #d83223;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 1rem 2rem;
+}
+
+.btn:hover {
+  background-color: #b92b1e;
+}

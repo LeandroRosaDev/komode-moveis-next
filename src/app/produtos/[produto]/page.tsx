@@ -6,6 +6,8 @@ import style from "./produtos.module.css";
 import { token } from "@/app/api/api";
 import { useState, useEffect } from "react";
 import CategoriasMenu from "@/componentes/produtosComponentes/categorias/CategoriasMenu";
+import { ButtonBack } from "@/componentes/ButtonBack";
+import LoadingComponent from "@/componentes/loadingComponentes/LoadingProduto";
 
 export default function ProdutoPage({ params }: PageParams) {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
@@ -29,7 +31,12 @@ export default function ProdutoPage({ params }: PageParams) {
   }, [params.produto]);
 
   if (!data) {
-    return <div>Loading...</div>;
+    return (
+      <main style={{ width: "100%" }}>
+        {" "}
+        <CategoriasMenu /> <LoadingComponent />
+      </main>
+    );
   }
 
   const handleThumbnailClick = (index: number) => {
@@ -51,6 +58,7 @@ export default function ProdutoPage({ params }: PageParams) {
   return (
     <section className={style.produtoPage}>
       <CategoriasMenu />
+      <ButtonBack>Voltar</ButtonBack>
       <div className={style.content}>
         <div className={style.produtoContainer}>
           <div className={style.produtoImages}>
@@ -126,20 +134,45 @@ export default function ProdutoPage({ params }: PageParams) {
               {data.nome_long} {data.cor}
             </h3>
             <p>{data.descricao}</p>
-            <h3>Medidas:</h3>
-            <p>Altura: {data.altura}m</p>
-            <p>Largura: {data.largura}m</p>
-            <p>Profundidade do sofá aberto: {data.profundidade_aberto}m</p>
-            <p>Profundidade do sofá fechado: {data.profundidade_fechado}m</p>
-            <h3>Assento:</h3>
-            <p>{data.assento}</p>
-            <h3>Encosto:</h3>
-            <p>{data.encosto}</p>
-            <h3>Características:</h3>
-            <p>{data.estrutura}</p>
-            <h3>Braços:</h3>
-            <p>{data.braco}</p>
-            <p>
+            {data.altura && data.largura && data.profundidade_aberto && (
+              <>
+                <h3>Medidas:</h3>
+                <p>Altura: {data.altura}m</p>
+                <p>Largura: {data.largura}m</p>
+                <p>Profundidade: {data.profundidade_aberto}m</p>
+                {data.profundidade_fechado && (
+                  <p>
+                    Profundidade fechado(sofás retráteis):{" "}
+                    {data.profundidade_fechado}m
+                  </p>
+                )}
+              </>
+            )}
+            {data.assento && (
+              <>
+                <h3>Assento:</h3>
+                <p>{data.assento}</p>
+              </>
+            )}
+            {data.encosto && (
+              <>
+                <h3>Encosto:</h3>
+                <p>{data.encosto}</p>
+              </>
+            )}
+            {data.estrutura && (
+              <>
+                <h3>Características:</h3>
+                <p>{data.estrutura}</p>
+              </>
+            )}
+            {data.braco && (
+              <>
+                <h3>Braços:</h3>
+                <p>{data.braco}</p>
+              </>
+            )}
+            <p style={{ marginTop: "2rem" }}>
               * As imagens dos produtos são meramente ilustrativas. As cores
               podem sofrer variações dependendo da luminosidade, tipo de câmera
               ou mesmo da visualização das imagens em computadores, notebooks

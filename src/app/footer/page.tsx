@@ -11,11 +11,14 @@ export default async function FooterPage() {
         <div className={style.contato}>
           <div className={style.endereco}>
             <h1>Visite nosso show room</h1>
-            <p>Av. Dr Délio Guaraná nº000 São João de Meriti, RJ</p>
+            <p>Rua Pires do rio nº509 São João de Meriti, RJ</p>
             <p>Seg - De: 08 as: 18 pm | Sáb: 08 am - 12 pm</p>
           </div>
           <div className={style.telefone}>
-            <Link className="buttonTransparent" href="">
+            <Link
+              className="buttonTransparent"
+              href="https://www.google.com/maps/place/AL+M%C3%B3veis+e+Estofados/@-22.7869933,-43.3969211,21z/data=!4m20!1m13!4m12!1m4!2m2!1d-43.3946624!2d-22.7835904!4e1!1m6!1m2!1s0x99643b2a103ebb:0xd822b89acf0de156!2sjm+rodrigues!2m2!1d-43.3967886!2d-22.7872351!3m5!1s0x996569cf804ddb:0xbf605c5e51e6ef5c!8m2!3d-22.7869932!4d-43.3966233!16s%2Fg%2F11fltq5wrn?entry=ttu"
+            >
               <Image
                 src="/assets/icon/location.svg"
                 width={20}
@@ -39,7 +42,7 @@ export default async function FooterPage() {
                   fontWeight: "700",
                 }}
               >
-                (21)2100 0000
+                (21)9 7899-1540
               </a>
             </div>
           </div>
@@ -49,8 +52,8 @@ export default async function FooterPage() {
           <div>
             <h1>Encontre Aqui</h1>
             <Link href="/">Inicio</Link>
-            <Link href="/produto">Produtos</Link>
-            <Link href="/categorias">Categorias</Link>
+            <Link href="/produtos">Produtos</Link>
+            <Link href="/produtos">Categorias</Link>
           </div>
           <div>
             <h1>Links Diretos</h1>
@@ -68,7 +71,10 @@ export default async function FooterPage() {
       </section>
       <section className={style.lowFooter}>
         <div>
-          <a target="blank" href="https://www.facebook.com/KomodeMoveis/">
+          <a
+            target="blank"
+            href="https://www.facebook.com/komodemoveisedecorados"
+          >
             <Image src={socialIcon1} alt="Ícone do facebook" />
           </a>
           <a target="blank" href="https://www.instagram.com/komodemd/">

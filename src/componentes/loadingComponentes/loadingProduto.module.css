@@ -1,0 +1,111 @@
+/* loading.module.css */
+.produtoPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.produtoContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.produtoImages {
+  flex: 1;
+  min-width: 300px;
+  margin-right: 20px;
+}
+
+.imageContainer {
+  position: relative;
+  width: 600px;
+  height: 500px;
+  background-color: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.loadingImage {
+  width: 100%;
+  height: 100%;
+  background-color: #f0f0f0;
+}
+
+.navButton {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.thumbnailContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.thumbnail {
+  width: 100px;
+  height: 80px;
+  background-color: #f0f0f0;
+  margin-right: 10px;
+}
+
+.produtoInfo {
+  flex: 1;
+  min-width: 300px;
+}
+
+.loadingText {
+  width: 100%;
+  height: 20px;
+  background-color: #f0f0f0;
+  margin-bottom: 10px;
+}
+
+.preco {
+  display: flex;
+  flex-direction: column;
+}
+
+.cores {
+  display: flex;
+  align-items: center;
+}
+
+.loadingColor {
+  width: 30px;
+  height: 30px;
+  background-color: #f0f0f0;
+  margin-left: 10px;
+}
+
+.whatsappButton {
+  width: 200px;
+  height: 50px;
+  background-color: #f0f0f0;
+  margin-top: 20px;
+}
+
+.descricaoContainer {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.descricaoMenu {
+  display: flex;
+  justify-content: space-around;
+}
+
+.descricao {
+  margin-top: 20px;
+}

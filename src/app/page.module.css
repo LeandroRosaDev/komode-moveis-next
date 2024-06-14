@@ -18,6 +18,12 @@
   text-transform: uppercase;
   gap: 0.5rem;
 }
+.tarjaVermelha div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
 
 .gridProdutosContainer,
 .sobreContainer,
@@ -196,4 +202,16 @@
 .socialImg:hover {
   transform: scale(103%);
   transition: 0.4s;
+}
+
+@media (max-width: 600px) {
+  .tarjaVermelha {
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+  }
+  .tarjaVermelha div {
+    gap: 0.5;
+    margin: 0.5rem auto;
+  }
 }

@@ -1,5 +1,6 @@
-import Image from 'next/image';
-import style from './contatoPage.module.css';
+import Image from "next/image";
+import style from "./contatoPage.module.css";
+import Link from "next/link";
 
 export default function ContatoPage() {
   return (
@@ -42,7 +43,7 @@ export default function ContatoPage() {
                 Entre em <br /> Contato
               </h2>
               <p>
-                T +55 21 99455 3607 <br /> F +55 21 96645 3123{' '}
+                T +55 21 9 7899-1540 <br />
               </p>
             </div>
             <div className={style.boxContato}>
@@ -67,9 +68,9 @@ export default function ContatoPage() {
             dúvidas ou reclamações basta enviar-nos uma mensagem
           </p>
 
-          <a className="buttonTransparent" href="">
-            whatsapp
-          </a>
+          <Link className="buttonTransparent" href="/reclame-aqui">
+            MENSAGEM
+          </Link>
         </div>
       </section>
     </main>

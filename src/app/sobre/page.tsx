@@ -37,18 +37,18 @@ export default function SobrePage() {
             alt="Card com o ano de 2019"
           />
           <h3 className="secondTitle">
-            <span>Como foi o nosso inicio </span> <br />
-            No início de nossa jornada, em 2019, a Komode Móveis e Decorados era
-            apenas um sonho, uma pequena semente de esperança plantada em solo
-            fértil. Em uma modesta loja, começamos a escrever nossa história,
-            cheios de determinação e paixão pela criação de móveis que
-            transformam ambientes em lares acolhedores. Com o tempo, aprendemos
-            que cada peça de mobiliário que produzimos é mais do que apenas um
+            <span>Como foi o nosso início </span> <br />
+            No início de nossa jornada, em 2019, a Komode Móveis e Decorados
+            nasceu como um sonho, uma pequena semente de esperança plantada em
+            solo fértil. Em uma modesta loja, começamos a traçar nossa história,
+            movidos pela determinação e paixão em criar móveis que transformam
+            ambientes em lares acolhedores. Ao longo do tempo, aprendemos que
+            cada peça de mobiliário que produzimos vai além de ser um simples
             objeto. É uma expressão de nossa dedicação, um reflexo de nossa
-            criatividade e um testemunho de nossa busca incessante pela
-            qualidade. Com cada detalhe meticulosamente pensado e cada estofado
-            cuidadosamente escolhido, construímos não apenas móveis, mas sim,
-            memórias.
+            criatividade e um testemunho de nossa incessante busca pela
+            qualidade. Com cada detalhe meticulosamente planejado e cada
+            estofado cuidadosamente selecionado, não construímos apenas móveis,
+            mas sim, memórias duradouras.
           </h3>
         </div>
       </div>
@@ -70,18 +70,18 @@ export default function SobrePage() {
             alt=" Card com o ano de 2021"
           />
           <h3 className="secondTitle">
-            <span>Como foi o nosso inicio </span> <br />
-            No início de nossa jornada, em 2019, a Komode Móveis e Decorados era
-            apenas um sonho, uma pequena semente de esperança plantada em solo
-            fértil. Em uma modesta loja, começamos a escrever nossa história,
-            cheios de determinação e paixão pela criação de móveis que
-            transformam ambientes em lares acolhedores. Com o tempo, aprendemos
-            que cada peça de mobiliário que produzimos é mais do que apenas um
-            objeto. É uma expressão de nossa dedicação, um reflexo de nossa
-            criatividade e um testemunho de nossa busca incessante pela
-            qualidade. Com cada detalhe meticulosamente pensado e cada estofado
-            cuidadosamente escolhido, construímos não apenas móveis, mas sim,
-            memórias.
+            <span>A pandemia </span> <br />
+            Em 2021, a Komode Móveis e Decorados enfrentou um dos maiores
+            desafios de sua trajetória: a pandemia. Em um momento de incertezas,
+            mantivemos nosso compromisso com nossos colaboradores e clientes,
+            sem reduzir o quadro de funcionários e mantendo o mesmo padrão de
+            excelência em nossos estofados. Enfrentamos as adversidades com
+            resiliência e inovação, sempre em busca do melhor atendimento e da
+            mais alta qualidade em nossos produtos. Cada peça continuou a ser
+            uma expressão de nossa dedicação, refletindo a mesma criatividade e
+            empenho que nos caracterizam desde o início. Assim, reforçamos nossa
+            missão de transformar ambientes em lares acolhedores, com a certeza
+            de que juntos, superamos qualquer obstáculo.
           </h3>
         </div>
       </div>
@@ -103,18 +103,16 @@ export default function SobrePage() {
             alt="Card com o ano de 2022"
           />
           <h3 className="secondTitle">
-            <span>Como foi o nosso inicio </span> <br />
-            No início de nossa jornada, em 2019, a Komode Móveis e Decorados era
-            apenas um sonho, uma pequena semente de esperança plantada em solo
-            fértil. Em uma modesta loja, começamos a escrever nossa história,
-            cheios de determinação e paixão pela criação de móveis que
-            transformam ambientes em lares acolhedores. Com o tempo, aprendemos
-            que cada peça de mobiliário que produzimos é mais do que apenas um
-            objeto. É uma expressão de nossa dedicação, um reflexo de nossa
-            criatividade e um testemunho de nossa busca incessante pela
-            qualidade. Com cada detalhe meticulosamente pensado e cada estofado
-            cuidadosamente escolhido, construímos não apenas móveis, mas sim,
-            memórias.
+            <span>A Fábrica </span> <br />
+            Após consolidar nossa presença no mercado, em 2022, decidimos dar um
+            passo audacioso: a construção de nossa própria fábrica. Encaramos
+            este desafio com determinação, trabalho árduo e o compromisso
+            inabalável de nossa dedicada equipe. Superamos cada obstáculo,
+            transformando nossa visão em realidade. Hoje, a fábrica da Komode
+            Móveis e Decorados é o coração pulsante de nossa produção, onde
+            qualidade e inovação se encontram em cada peça que criamos. Assim,
+            escrevemos mais um capítulo emocionante em nossa jornada, com a
+            certeza de que muitos outros virão.
           </h3>
         </div>
       </div>
@@ -139,34 +137,35 @@ export default function SobrePage() {
             alt="Card com o ano de 2024"
           />
           <h3 className="secondTitle">
-            <span>Como foi o nosso inicio </span> <br />
-            No início de nossa jornada, em 2019, a Komode Móveis e Decorados era
-            apenas um sonho, uma pequena semente de esperança plantada em solo
-            fértil. Em uma modesta loja, começamos a escrever nossa história,
-            cheios de determinação e paixão pela criação de móveis que
-            transformam ambientes em lares acolhedores. Com o tempo, aprendemos
-            que cada peça de mobiliário que produzimos é mais do que apenas um
-            objeto. É uma expressão de nossa dedicação, um reflexo de nossa
-            criatividade e um testemunho de nossa busca incessante pela
-            qualidade. Com cada detalhe meticulosamente pensado e cada estofado
-            cuidadosamente escolhido, construímos não apenas móveis, mas sim,
-            memórias.
+            <span>O Hoje, 2024 um ano de novidades </span> <br />
+            Em 2024, a Komode Móveis e Decorados permanece fiel aos seus
+            propósitos iniciais, sempre em busca de inovação e excelência. Ao
+            longo dos anos, nossa dedicação à qualidade e ao atendimento
+            impecável nunca vacilou. Continuamos a transformar ambientes em
+            lares acolhedores, com móveis que são uma expressão de nossa
+            criatividade e compromisso com a satisfação de nossos clientes. A
+            cada nova coleção, renovamos nosso empenho em oferecer produtos que
+            aliam design sofisticado e funcionalidade. Nossa trajetória é
+            marcada por um contínuo aperfeiçoamento, assegurando que cada peça
+            entregue reflita o melhor de nosso trabalho e paixão.
           </h3>
         </div>
       </div>
       <div className={style.parallax}>
         <h1 className="mainTitle" style={{ color: "white" }}>
-          NOSSA HISTÓRIA
+          KOMODE MÓVEIS
         </h1>
         <h3 className={`secondTitle ${style.h3History}`}>
-          Acreditamos na criatividade como uma das principais forças do
-          progresso. Com essa ideia, montamos uma linha de móveis excepcionais
-          para os amantes de móveis em todos os lugares. Você finalmente chegou
-          a este momento em sua vida - você comprou sua primeira casa ou se
-          mudou para seu próprio apartamento. Na Komode Móveis e Decorados,
-          estamos aqui para tornar esse momento especial ainda mais memorável,
-          oferecendo uma gama de móveis e Decorados excepcionais que
-          transformarão sua casa em um lar acolhedor.
+          Ao escolher a Komode Móveis e Decorados, você está optando por uma
+          empresa que valoriza a excelência, a inovação e a satisfação do
+          cliente. Nossa trajetória, marcada por anos de dedicação e evolução,
+          reflete nosso compromisso inabalável com a qualidade e o design. Cada
+          peça que criamos é um testemunho de nossa paixão em transformar
+          ambientes em lares acolhedores e elegantes. Confie na Komode Móveis
+          para trazer sofisticação, funcionalidade e conforto ao seu espaço. Com
+          nossa experiência e atenção aos detalhes, garantimos que a sua casa
+          será um reflexo único de sua personalidade e estilo. A Komode Móveis
+          é, sem dúvida, a escolha certa para decorar o seu lar.
         </h3>
       </div>
     </main>

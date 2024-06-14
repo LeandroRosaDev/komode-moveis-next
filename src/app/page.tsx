@@ -23,14 +23,20 @@ export default function Home() {
       </h1> */}
       <div className={style.bg}></div>
       <div className={style.tarjaVermelha}>
-        <h1>Todos os produtos com frete grátis para todo o Rio de Janeiro </h1>
-        <Image src={iconTarja1} alt="Iconde de um caminhao" width={50} />
-        <h1>pagamento em até 12x sem juros no cartão</h1>
-        <Image src={iconTarja2} alt="Iconde de um caminhao" width={50} />
-
-        <h1> e você só vai pagar no hora da entrega</h1>
-
-        <Image src={iconTarja3} alt="Iconde de um caminhao" width={50} />
+        <div>
+          <h1>
+            Todos os produtos com frete grátis para todo o Rio de Janeiro{" "}
+          </h1>
+          <Image src={iconTarja1} alt="Iconde de um caminhao" width={50} />
+        </div>
+        <div>
+          <h1>pagamento em até 12x sem juros no cartão</h1>
+          <Image src={iconTarja2} alt="Iconde de um caminhao" width={50} />
+        </div>
+        <div>
+          <h1> e você só vai pagar no hora da entrega</h1>
+          <Image src={iconTarja3} alt="Iconde de um caminhao" width={50} />
+        </div>
       </div>
       <CategoriasMenuInicio />
       <section className={style.gridProdutosContainer}>

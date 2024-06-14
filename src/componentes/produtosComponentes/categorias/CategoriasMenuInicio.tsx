@@ -50,7 +50,7 @@ export default function CategoriasMenuInicio() {
           />
           <p>Banheiro</p>
         </Link>
-        <Link href="/categorias/Escritorio">
+        <Link href="/categorias/Escritorio" id={style.none}>
           <Image
             src="/assets/menu/10.svg"
             alt="Icone de um sofá"
@@ -59,7 +59,6 @@ export default function CategoriasMenuInicio() {
           />
           <p>Escritório</p>
         </Link>
-
         <Link href="/categorias/Lavanderia">
           <Image
             src="/assets/menu/15.svg"

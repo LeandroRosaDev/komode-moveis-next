@@ -23,6 +23,13 @@
 
 @media (max-width: 600px) {
   .gridCategorias {
-    padding: 1rem 2rem;
+    padding: 1rem 1rem;
+    gap: 2rem;
+  }
+  .gridCategorias img {
+    width: 50%;
+  }
+  #none {
+    display: none;
   }
 }

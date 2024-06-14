@@ -37,7 +37,7 @@
 }
 
 .desktopMenu a:after {
-  content: '';
+  content: "";
   display: block;
   height: 2px;
   width: 0px;
@@ -132,5 +132,13 @@
   .secondMenu {
     position: absolute;
     left: -201px;
+  }
+  .menu {
+    margin-top: 5rem;
+  }
+  .menu img {
+    margin-top: 1rem;
+    width: 50%;
+    height: 50%;
   }
 }
