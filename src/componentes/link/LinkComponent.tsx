@@ -2,18 +2,27 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import style from "./links.module.css";
-import Link from "next/link";
 
-const calculateTimeLeft = () => {
-  let endTime: any = localStorage.getItem("endTime");
+type TimeLeft = {
+  hours: number;
+  minutes: number;
+  seconds: number;
+};
+
+const calculateTimeLeft = (): TimeLeft => {
+  if (typeof window === "undefined") {
+    return { hours: 27, minutes: 0, seconds: 0 };
+  }
+
+  let endTime = localStorage.getItem("endTime");
   if (!endTime) {
-    endTime = Date.now() + 27 * 60 * 60 * 1000;
-    localStorage.setItem("endTime", endTime.toString());
+    endTime = (Date.now() + 27 * 60 * 60 * 1000).toString();
+    localStorage.setItem("endTime", endTime);
   }
   const now = new Date().getTime();
   const difference = new Date(parseInt(endTime)).getTime() - now;
 
-  let timeLeft = {
+  let timeLeft: TimeLeft = {
     hours: Math.floor(difference / (1000 * 60 * 60)),
     minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
     seconds: Math.floor((difference % (1000 * 60)) / 1000),
@@ -23,14 +32,16 @@ const calculateTimeLeft = () => {
 };
 
 export default function SobrePage() {
-  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+  const [timeLeft, setTimeLeft] = useState<TimeLeft>(calculateTimeLeft());
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setTimeLeft(calculateTimeLeft());
-    }, 1000);
+    if (typeof window !== "undefined") {
+      const timer = setInterval(() => {
+        setTimeLeft(calculateTimeLeft());
+      }, 1000);
 
-    return () => clearInterval(timer);
+      return () => clearInterval(timer);
+    }
   }, []);
 
   return (
