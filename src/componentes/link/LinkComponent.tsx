@@ -31,7 +31,7 @@ const calculateTimeLeft = (): TimeLeft => {
   return timeLeft;
 };
 
-export default function SobrePage() {
+export default function LinkComponent() {
   const [timeLeft, setTimeLeft] = useState<TimeLeft>(calculateTimeLeft());
 
   useEffect(() => {
@@ -45,7 +45,7 @@ export default function SobrePage() {
   }, []);
 
   return (
-    <main className={style.bg}>
+    <section className={style.bg}>
       <Image
         src="/assets/logotipo2.png"
         alt="Logotipo"
@@ -141,6 +141,6 @@ export default function SobrePage() {
           </p>
         </div>
       </div>
-    </main>
+    </section>
   );
 }
