@@ -35,7 +35,7 @@ export default function RootLayout({
       className={`${montserrat.className} ${roboto.className}`}
     >
       <head>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="icon.ico" />
         <script
           dangerouslySetInnerHTML={{
             __html: `
